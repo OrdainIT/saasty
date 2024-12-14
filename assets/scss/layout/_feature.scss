@@ -1,0 +1,212 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  08. feature css start
+/*----------------------------------------*/
+.it-feature {
+    &-item {
+        border-radius: 30px;
+        padding: 55px 30px;
+        border: 1px solid rgba(116, 111, 255, 0.2);
+        box-shadow: 0 20px 30px 0 rgba(1, 6, 20, 0.1);
+        background: #fff;
+        transition: .3s;
+        &:hover {
+            border: 1px solid rgba(116, 111, 255, 1);
+        }
+    }
+    &-title {
+        font-size: 20px;
+        @media #{$lg}{
+            font-size: 19px;
+        }
+    }
+    &-icon {
+        & img {
+            height: 110px;
+        }
+    }
+}
+.dt-feature {
+    &-area {
+        @media #{$md,$xs}{
+            padding-bottom: 90px;
+        }
+    }
+    &-item {
+        border-radius: 30px;
+        padding: 40px 30px;
+        border: 1px solid transparent;
+        box-shadow: 0 20px 30px 0 rgba(1, 6, 20, 0.1);
+        background: #fff;
+        transition: .3s;
+        @media #{$xl}{
+            padding: 40px 15px;
+        }
+        &:hover {
+            border: 1px solid rgba(116, 111, 255, 1);
+            & .dt-feature-icon {
+                & img {
+                    animation: icon-bounce 0.8s 1;
+                }
+            }
+        }
+    }
+    &-title {
+        font-weight: 600;
+        font-size: 22px;
+    }
+    &-icon {
+        & img {
+            height: 59px;
+            transition: all 0.3s ease-out 0s;
+        }
+    }
+    &-content {
+        & p {
+            font-size: 16px;
+            letter-spacing: 0.01em;
+        }
+    }
+    &-shape-1 {
+        position: absolute;
+        top: 16%;
+        left: 11%;
+        z-index: -1;
+        @media #{$md,$xs}{
+            top: 2%;
+            transform: scale(.6);
+        }
+    }
+}
+.dt-section-bg {
+    background: linear-gradient(180deg, #f1f5ff 0%, rgba(241, 245, 255, 0) 100%);
+}
+.pg-feature {
+    &-area {
+        & .pg-section-title {
+            font-weight: 700;
+        }
+    }
+    &-item {
+        border-radius: 30px;
+        padding: 50px 20px;
+        padding-bottom: 42px;
+        border: 1px solid transparent;
+        box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
+        @media #{$xl}{
+            padding: 40px 15px;
+        }
+        @media #{$xs}{
+            margin-bottom: 30px;
+        }
+
+        & p {
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.01em;
+            margin-bottom: 0;
+            color: var(--it-common-white);
+            line-height: 2;
+        }
+    }
+    &-title {
+        font-weight: 600;
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: var(--it-common-white);
+    }
+    &-icon {
+        display: block;
+        margin-bottom: 26px;
+        & img {
+            height: 82px;
+        }
+    }
+    &-left {
+        @media #{$lg,$md,$xs}{
+            margin-bottom: 70px;
+        }
+        & .pg-section-title-box p {
+            @media #{$lg}{
+                margin-right: 200px;
+                & br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.ss-feature {
+    &-area {
+        @media #{$md,$xs}{
+            padding-top: 120px;
+            padding-bottom: 90px;
+        }
+    }
+    &-item {
+        border-radius: 50px;
+        position: relative;
+        z-index: 3;
+        padding: 60px 25px;
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to bottom, rgba(58, 55, 244, 0.05), rgba(58, 55, 244, 0.5));
+            z-index: 0;
+            border-radius: 50px;
+        }
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            content: "";
+            height: 99.5%;
+            width: 99.5%;
+            background: var(--it-common-blue);
+            z-index: 1;
+            margin: 0 auto;
+            border-radius: 50px;
+            transition: .5s;
+        }
+        & > div {
+            position: relative;
+            z-index: 1;
+        }
+        &:hover {
+            &::before {
+                background: rgba(59, 55, 244, 0.1);
+            }
+        }
+    }
+    &-title {
+        font-weight: 600;
+        font-size: 24px;
+        color: var(--it-common-white);
+    }
+    &-content {
+        & p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 2;
+            letter-spacing: 0.01em;
+            color: var(--it-common-white);
+            @media #{$lg,$md,$xs}{
+                & br {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-icon {
+        & img {
+            height: 140px;
+        }
+    }
+}

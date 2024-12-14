@@ -1,0 +1,140 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  08. brand css start
+/*----------------------------------------*/
+.it-brand {
+    &-ptb {
+        padding: 66px 0;
+    }
+    &-top-box {
+        line-height: 0;
+        &::after{
+            content: '';
+            width: 100%;
+            height: 1px;
+            transform: translateY(-14px);
+            display: inline-block;
+            background-color: var(--it-common-black);
+            z-index: -1;
+        }
+        & span {
+            font-weight: 500;
+            font-size: 20px;
+            display: inline-block;
+            color: var(--it-common-black);
+            padding: 0 55px;
+            background-color: var(--it-gray-1);
+            line-height: 1;
+            z-index: 1;
+            position: relative;
+            @media #{$xs}{
+                font-size: 12px;
+                padding: 0 15px;
+            }
+        }
+    }
+}
+.dt-brand-style {
+    @media #{$xl,$lg,$md,$xs}{
+        padding-top: 120px;
+    }
+    & .it-brand-top-box {
+        & span {
+            background-color: #F5F9FA;
+        }
+    }
+}
+.cr-brand {
+    &-bg {
+        margin: 0 100px;
+        border-radius: 30px;
+        background: linear-gradient(180deg, #f1f5ff 0%, rgba(241, 245, 255, 0) 100%);
+        @media #{$xxl,$xl}{
+            margin: 0 30px;
+        }
+        @media #{$lg,$md}{
+            padding-top: 100px;
+            padding-bottom: 120px;
+            margin: 0 30px;
+        }
+        @media #{$xs}{
+            margin: 0 15px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+    }
+    &-item {
+        display: inline-block;
+        padding: 17px 22px;
+        border-radius: 80px;
+        & img {
+            border-radius: 80px;
+            box-shadow: 0 4px 10px 0 rgba(20, 50, 48, 0.1);
+        }
+    }
+    &-active{
+        & .slider-transtion {
+            -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+        }
+        & .swiper-slide{
+            width: auto;
+        }
+    }
+    &-active-2 {
+        & .slider-transtion {
+            -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+        }
+        & .swiper-slide{
+            width: auto;
+        }
+    }
+    &-shape {
+        &-1 {
+            position: absolute;
+            top: 22%;
+            right: 42%;
+        }
+    }
+    &-area {
+        @media #{$xl,$lg,$md,$xs}{
+            margin-top: 120px;
+        }
+    }
+}
+.ss-brand {
+    &-ptb {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 92px 0;
+        position: relative;
+        @media #{$md,$xs}{
+            padding: 60px 0;
+        }
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            height: 100%;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+        }
+    }
+}
+.ss-brand-active .swiper-slide {
+	width: auto;
+}
+.ss-brand-active-2 .swiper-slide {
+	width: auto;
+}
+.it-brand-active .swiper-slide {
+	width: auto;
+}
+.ma-brand-style {
+    & .ss-brand-ptb {
+        border: none;
+        padding: 102px 0;
+    }
+}

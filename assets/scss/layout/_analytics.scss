@@ -1,0 +1,159 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  15. analytics css start
+/*----------------------------------------*/
+.it-analytics {
+    &-button {
+        & nav {
+            & button {
+                font-weight: 600;
+                font-size: 16px;
+                color: #5F6168;
+                padding: 17.4px 40px;
+                border-radius: 500px;
+                @media #{$md}{
+                    font-size: 14px;
+                    padding: 9.4px 22px;
+                }
+                @media #{$xs}{
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                    padding: 9.4px 22px;
+                }
+                @media #{$sm}{
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                    padding: 6.4px 17px
+                }
+                &:not(:last-child){
+                    margin-right: 12px;
+                }
+                &.active{
+                    color: var(--it-common-white);
+                    @media #{$xs}{
+                        color: var(--it-theme-1);
+                    }
+                    @media #{$sm}{
+                        color: var(--it-common-white);
+                    }
+                }
+            }
+        }
+    }
+    &-item {
+        &-box {
+            padding: 62px 70px;
+            padding-right: 88px;
+            border-radius: 30px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            @media #{$xl}{
+                padding: 52px 30px;
+                padding-right: 35px;
+            }
+            @media #{$lg}{
+                padding: 52px 30px;
+                padding-right: 35px;
+            }
+            @media #{$md,$xs}{
+                flex-wrap: wrap;
+                padding: 52px 30px;
+                padding-right: 35px;
+            }
+            & .it-section-title-2 {
+                @media #{$xl,$lg,$md}{
+                    & br {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &-list {
+            margin-bottom: 38px;
+            & ul {
+                & li {
+                    list-style-type: none;
+                    position: relative;
+                    padding-left: 32px;
+                    &:not(:last-child){
+                        margin-bottom: 18px;
+                    }
+                    & span {
+                        font-weight: 600;
+                        font-size: 17px;
+                        color: var(--it-common-white);
+                    }
+                    & svg {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+            }
+        }
+        &-right {
+            flex: 0 0 auto;
+            @media #{$lg,$md,$xs}{
+                flex: auto;
+            }
+        }
+        &-thumb {
+            @media #{$xs}{
+                margin-bottom: 15px;
+                width: 100%;
+            }
+            & img {
+                @media #{$xs}{
+                    width: 100%;
+                }
+            }
+        }
+        &-thumb-box {
+            @media #{$xs}{
+                width: 100%;
+            }
+        }
+    }
+    &-shape {
+        &-1 {
+            position: absolute;
+            bottom: -29%;
+            right: -10%;
+            z-index: -1;
+            @media #{$xxxl}{
+                top: 3%;
+                right: 2.5%;
+            }
+        }
+        &-2 {
+            position: absolute;
+            top: 9%;
+            right: 7.5%;
+            z-index: -1;
+            @media #{$xl}{
+                top: 2%;
+                right: 2.5%;
+                transform: scale(.7);
+            }
+        }
+    }
+}
+#lineMarker{
+    position: absolute;
+    top: 50%;
+    height: 100%;
+    z-index: -1;
+    transition: 0.4s;
+    border-radius: 500px;
+    display: inline-block;
+    transform: translateY(-50%);
+    background: var(--it-theme-1);
+    @media #{$xs}{
+        background: transparent;
+    }
+    @media #{$sm}{
+        top: 39%;
+        background: var(--it-theme-1);
+    }
+}

@@ -1,0 +1,28 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  08. rating css start
+/*----------------------------------------*/
+.cr-rating {
+    &-area {
+        @media #{$xl,$lg,$md,$xs}{
+            padding: 120px 0;
+        }
+    }
+    &-item {
+        padding: 50px 30px;
+        padding-top: 55px;
+        border-radius: 30px;
+        background-color: #F1F5FF;
+        @media #{$lg}{
+            padding: 50px 15px;
+            padding-top: 55px;
+        }
+        & span {
+            font-size: 17px;
+        }
+        & img {
+            height: 56px;
+        }
+    }
+}

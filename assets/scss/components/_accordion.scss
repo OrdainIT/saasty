@@ -1,0 +1,212 @@
+@use '../utils' as *;
+
+.it-custom-accordion {
+    & .accordion-items {
+        box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.07);
+        background: #fff;
+        border-radius: 16px;
+        padding: 0 30px;
+        margin-bottom: 15px;
+    }
+    & .accordion-buttons {
+        position: relative;
+        font-weight: 500;
+        font-size: 20px;
+        text-align: left;
+        padding: 29px 0px;
+        padding-right: 50px;
+        width: 100%;
+        & i {
+            position: absolute;
+            left: 20px;
+            top: 24%;
+            font-style: normal;
+        }
+        @media #{$lg} {
+            padding-right: 30px;
+            & br{
+                display: none;
+            }
+        }
+        @media #{$xs} {
+            padding-right: 30px;
+            font-size: 18px;
+            & br{
+                display: none;
+            }
+        }
+        &::after {
+            position: absolute;
+            content: "\f105";
+            font-family: 'Font Awesome 6 Pro';
+            top: 0;
+            bottom: 0;
+            right: 0px;
+            font-weight: 300;
+            font-size: 24px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            width: 30px;
+            border-radius: 50%;
+            color: var(--it-common-white);
+            background-color: var(--it-common-black);
+            margin: auto;
+            z-index: 1;
+            transition: .3s;
+            @media #{$lg,$md,$xs} {
+                font-size: 18px;
+            }
+            &:not(.collapsed) {
+                color: var(--it-common-white);
+            }
+        }
+        &:not(.collapsed) {
+            padding-bottom: 15px;
+        }
+        &.collapsed {
+            &::after {
+                transform: rotate(90deg);
+                background-color: var(--it-theme-1);
+            }
+        }
+    }
+
+    &.collapsed {
+        position: relative;
+        z-index: 99;
+    }
+
+    & .accordion-body {
+        padding:0px;
+        padding-bottom: 40px;
+        position: relative;
+        z-index: 1;
+        & p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-right: 50px;
+            @media #{$xl} {
+                font-size: 15px;
+            }    
+            @media #{$lg,$md,$xs} {
+                font-size: 14px;
+                margin-right: 0;
+            }
+    
+            @media #{$sm} {
+                font-size: 15px;
+            }
+        }
+    }
+}
+.pg-custom-accordion {
+    margin-left: 79px;
+    @media #{$lg,$md,$xs}{  
+        margin-right: 0; 
+        margin-left: 0;           
+    }
+    & .accordion-items {
+        margin-bottom: 30px;
+        background: #fff;
+        padding: 0 28px;
+        border: 1px solid #ebecf0;
+        border-radius: 10px;
+        @media #{$xs}{
+            padding: 0 15px;
+        }
+    }
+    & .accordion-buttons {
+        position: relative;
+        font-weight: 600;
+        font-size: 22px;
+        text-align: left;
+        padding: 23px 0px;
+        padding-right: 45px;
+        line-height: 1.3;
+        width: 100%;
+        & i {
+            position: absolute;
+            left: 20px;
+            top: 24%;
+            font-style: normal;
+        }
+        @media #{$lg} {
+            padding-right: 30px;
+            font-size: 20px;
+            & br{
+                display: none;
+            }
+        }
+        @media #{$xs} {
+            padding-right: 30px;
+            font-size: 16px;
+            & br{
+                display: none;
+            }
+        }
+        &::after {
+            position: absolute;
+            content: "\f068";
+            font-family: 'Font Awesome 6 Pro';
+            top: 50%;
+            right: 0px;
+            transform: translateY(-50%);
+            font-size: 22px;            
+            text-align: center;  
+            font-weight: 300;
+            height: 26px;
+            line-height: 24px;
+            width: 26px;
+            border-radius: 50%;
+            color: #01103D;
+            border: 1px solid #01103D;
+            margin: auto;
+            transition: .3s;
+            @media #{$lg,$md,$xs} {
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+        &.collapsed {
+            &::after {
+                content: '\2b';
+                color: #5F6168;
+                border: 1px solid #C0C2C8;
+            }
+        }
+    }
+
+    &.collapsed {
+        position: relative;
+        z-index: 99;
+    }
+
+    & .accordion-body {
+        padding: 40px 0px;
+        padding-top: 0;
+        position: relative;
+        z-index: 1;
+        & p {
+            font-size: 16px;    
+            margin-right: 130px;        
+            @media #{$xl} {
+                font-size: 15px;
+            }    
+            @media #{$lg,$md,$xs} {
+                font-size: 14px;
+                margin-right: 0;
+            }
+    
+            @media #{$sm} {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+
+.it-reveal-line {
+	overflow: hidden;
+}

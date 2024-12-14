@@ -1,0 +1,231 @@
+
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  22. funfact css start
+/*----------------------------------------*/
+.dt-funfact {  
+    &-bg {
+        border-radius: 30px;
+        padding:0 115px;
+        margin-top: -125px;
+        @media #{$xl}{
+            padding: 0 70px;
+        }
+        @media #{$lg,$md}{
+            padding: 0 40px;
+        }
+        @media #{$xs}{
+            padding: 45px 25px;
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            bottom: -16px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            width: 95%;
+            height: 100%;
+            margin: 0 auto;
+            border-radius: 30px;
+            z-index: -1;
+            background: rgba(24, 156, 132, 0.2);
+        }
+
+    }
+    &-item {
+        padding: 74px 0;
+        @media #{$md}{
+            padding: 50px 30px;
+        }
+        @media #{$xs}{
+            padding: 0;
+            width: 100%;
+            padding-bottom: 30px;
+        }
+        & h5 {
+            font-weight: 700;
+            font-size: 60px;
+            color: var(--it-common-white);
+            @media #{$xl}{
+                font-size: 48px;
+            }
+            @media #{$lg}{
+                font-size: 40px;
+            }
+            @media #{$md}{
+                font-size: 36px;
+            }
+            @media #{$xs}{
+                font-size: 35px;
+            }
+        }
+        & p {
+            font-weight: 500;
+            font-size: 17px;
+            margin-bottom: 0;
+            color: var(--it-common-white);
+            @media #{$md,$xs}{
+                font-size: 13px;
+            }
+        }
+        &.border-right {
+            position: relative;
+            &::after{
+                position: absolute;
+                content: '';
+                top: 0;
+                right: -40%;
+                width: 1px;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.2);
+                @media #{$xl}{
+                    right: -31%;
+                }
+                @media #{$lg}{
+                    right: -21%;
+                }
+                @media #{$md,$xs}{
+                    display: none;
+                }
+            }
+        }
+    }
+    &-wrap {
+        @media #{$xs}{
+            text-align: center;
+        }
+    }
+}
+.pg-funfact-style-2 {
+    & .dt-funfact-bg {
+        background-color: #0c2c43;
+        padding: 0 74px;
+        @media #{$lg,$md,$xs}{
+            padding: 70px 50px;
+            padding-bottom: 40px;
+        }
+        &::after{
+            background-color: #8595A1;
+        }
+    }
+    & .dt-funfact-item {
+        @media #{$lg,$md,$xs}{
+            padding: 0;
+            margin-bottom: 30px;
+        }
+        &.border-right {
+            &::after{
+                @media #{$lg,$md,$xs}{
+                    display: none;
+                }
+            }
+        }
+        &.style-1 {
+            &.border-right {
+                &::after{
+                    right: 15%;
+                }
+            }
+        }
+        &.style-2 {
+            margin-left: 25px;
+            @media #{$xs}{
+                margin-left: 0px;    
+            }
+            &.border-right {
+                &::after{
+                    right: 0%;
+                }
+            }
+        }
+        &.style-3 {
+            margin-left: 55px;
+            @media #{$xs}{
+                margin-left: 0px;    
+            }
+            &.border-right {
+                &::after{
+                    right: -36%;
+                }
+            }
+        }
+    }
+}
+.pg-funfact-style {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    & .dt-funfact-item  {
+        padding: 0;
+        & p {
+            background: linear-gradient(90deg, #0bcf77 0%, #69d619 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            @media #{$lg,$md,$xs}{
+                font-size: 14px;
+            }
+        }
+    }
+}
+.ma-funfact-style {
+    & .dt-funfact-item {
+        @media #{$md,$xs}{
+            padding: 0;
+            padding-top: 50px;
+        }
+        &.style-2 {
+            margin-left: 30px;
+            @media #{$xs}{
+                margin-left: 0;
+            }
+        }
+        &.style-3 {
+            margin-left: 80px;
+            @media #{$xs}{
+                margin-left: 0;
+            }
+        }
+    }
+}
+.cr-funfact-style {
+    @media #{$md,$xs}{
+        margin-top: 100px;
+    }
+    & .dt-funfact-item {
+        &.style-2 {            
+            margin-left: 50px;
+            @media #{$md,$xs}{
+                margin-left: 0;
+            }
+        }
+        &.style-3 {
+            margin-left: 100px;
+            @media #{$md}{
+                margin-left: 30px;
+            } 
+            @media #{$xs}{
+                margin-left: 0px;
+            } 
+        }
+        @media #{$md,$xs}{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.it-funfact-inner-style {
+    & .dt-funfact-item {
+        & h5 {
+            font-weight: 600;
+            font-family: var(--it-ff-roboto);
+            color: var(--it-common-black);
+        }
+        & p {
+            background: none;
+            -webkit-text-fill-color: var(--it-common-black);
+            color: var(--it-common-black);
+        }
+    }
+}

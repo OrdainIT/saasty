@@ -1,0 +1,72 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  08. integration css start
+/*----------------------------------------*/
+
+.pg-integration {
+    &-bg {
+        background-color: #0C2C43;
+    }
+    &-left {
+        margin-right: 45px;
+        @media #{$xl,$lg}{
+            margin-right: 30px;
+        }
+        @media #{$md,$xs}{
+            margin-right: 0px;
+            margin-bottom: 50px;
+        }
+    }
+    &-thumb {
+        padding: 59px 45px;
+        text-align: center;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background-color: rgba($color: #FFFFFF, $alpha: .1);
+    }
+    &-shape-1 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+.it-integration-inner {
+    &-top {
+        & a {
+            height: 211px;
+            width: 211px;
+            line-height: 211px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: #F1F5FF;
+        }
+        & span {
+            display: inline-block;
+            font-weight: 700;
+            font-size: 45px;
+            margin: 0 50px;
+            letter-spacing: -0.04em;
+            color: var(--it-common-black);
+        }
+    }
+    &-wrap {
+        padding: 50px 40px;
+        border-radius: 10px;
+        background-color: #F1F5FF;
+        & p {
+            margin-bottom: 0;
+            font-family: var(--it-ff-roboto);
+        }
+    }
+    &-title {
+        font-weight: 700;
+        font-size: 22px;
+        letter-spacing: -0.01em;
+        color: #000;
+        margin-bottom: 17px;
+        line-height: 1.4;
+        font-family: var(--it-ff-roboto);
+    }
+}

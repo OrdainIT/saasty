@@ -1,0 +1,45 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  15. policy css start
+/*----------------------------------------*/
+
+.it-policy {
+    &-title {
+        font-weight: 700;
+        font-size: 22px;
+        margin-bottom: 30px;
+        color: var(--it-common-black);
+        text-transform: capitalize;
+    }
+    &-content {
+        & p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.6;
+            font-family: var(--it-ff-roboto);
+        }
+    }
+}
+.it-refund {
+    &-list-box {
+        & ul {
+            & li {
+                list-style-type: none;
+                padding-left: 28px;
+                position: relative;
+                &:not(:last-child){
+                    margin-bottom: 18px;
+                }
+                & span {
+                line-height: 1.6;
+                    & svg {
+                        position: absolute;
+                        top: 2px;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}

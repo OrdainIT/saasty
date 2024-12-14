@@ -1,0 +1,151 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  08. choose css start
+/*----------------------------------------*/
+.ai-choose {
+    &-style  {
+        & .it-software-item-list ul li {
+            padding-left: 35px;
+            &:not(:last-child){
+                margin-bottom: 20px;
+            }
+            & div {
+                & span {                
+                    font-weight: 600;
+                    font-size: 22px;
+                    display: block;
+                    margin-bottom: 10px;
+                    font-family: var(--it-ff-outfit);
+                }
+                & p {
+                    margin-bottom: 0;
+                }
+            }
+        } 
+    }
+    &-right-box {
+        margin-left: 60px;
+        margin-right: 20px;
+    }
+    &-thumb {
+        & img {
+            border-radius: 10px;
+            @media #{$md,$xs}{
+                width: 100%;
+            }
+            
+        }
+    }
+    &-thumb-sm {
+        position: absolute;
+        top: 15%;
+        left: -19%;
+        animation: itupdown 0.8s infinite alternate;
+        box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.2);
+        @media #{$md,$xs}{
+            display: none;
+        }
+        
+    }
+    &-right-box {
+        @media #{$md,$xs}{
+            margin-top: 60px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    &-shape {
+        &-2 {
+            position: absolute;
+            top: -8%;
+            right: -6%;
+            z-index: -1;
+            animation: itswing 1s forwards infinite alternate;
+            transform-origin: bottom left;
+            @media #{$xl}{
+                right: -8%;
+            }
+        }
+        &-3 {
+            position: absolute;
+            top: 12%;
+            left: 4%;
+            z-index: -1;
+            @media #{$xl,$lg}{
+                transform: scale(.7);
+            }
+        }
+    }
+}
+.seo-choose {
+    &-area {
+        @media #{$lg,$md,$xs}{
+            padding-top: 120px;
+            padding-bottom: 90px;
+        }
+    }
+    &-item {
+        padding: 42px 20px;
+        background-color: #F1F5FF;
+        border-radius: 10px;
+        text-align: center;
+        & span {
+            font-weight: 700;
+            font-size: 80px;
+            font-family: var(--it-ff-montserrat);
+            color: var(--it-theme-4);
+            display: block;
+            margin-bottom: 10px;
+            @media #{$xl}{
+                font-size: 60px;
+            }
+            @media #{$lg}{
+                font-size: 45px;
+            }
+            @media #{$md,$xs}{
+                font-size: 40px;
+            }
+        }
+        & p {
+            margin-bottom: 0;
+            font-size: 20px;
+            letter-spacing: 0.01em;
+            color: var(--it-common-black);
+            @media #{$xl}{
+                font-size: 18px;
+            }
+            @media #{$lg}{
+                font-size: 14px;
+            }
+            @media #{$md,$xs}{
+                font-size: 18px;
+            }
+        }
+    }
+    &-shape-1 {
+        position: absolute;
+        bottom: 26%;
+        left: 28%;
+        z-index: -1;
+        @media #{$lg}{
+            left: 27%;
+            transform: scale(.7);
+        }
+        @media #{$md,$xs}{
+            display: none;
+        }
+    }
+    &-left {
+        @media #{$md,$xs}{
+            margin-bottom: 50px;
+        }
+        & p {
+            @media #{$xl}{
+                & br {
+                    display: none;
+                }
+            }
+        }
+    }
+}

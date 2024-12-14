@@ -1,0 +1,200 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  08. about css start
+/*----------------------------------------*/
+
+.ss-about {
+    &-area {
+        @media #{$md,$xs}{
+            padding: 120px 0;
+        }
+    }
+    &-right {
+        margin-left: 80px;
+        @media #{$lg}{
+            margin-left: 0px;
+        }
+        @media #{$md,$xs}{
+            margin-left: 0px;
+            margin-top: 50px;
+        }
+
+        & .ss-section-title-box p {
+            @media #{$lg,$md,$xs}{
+                font-size: 16px;
+            }
+        }
+    }
+    &-funfact-wrap {
+        @media #{$md}{
+            margin-right: 180px;
+        }
+    }
+    &-funfact-item {
+        @media #{$xs}{
+            margin-bottom: 20px;
+        }
+        & h5 {
+            font-weight: 700;
+            font-size: 50px;
+            margin-bottom: 7px;
+            letter-spacing: 0.01em;
+            color: var(--it-common-white);
+            @media #{$lg,$md,$xs}{
+                font-size: 35px;
+            }
+            & i {
+                font-style: normal;
+            }
+        }
+        & span {
+            font-weight: 400;
+            font-size: 18px;
+            letter-spacing: 0.01em;
+            line-height: 1.6;
+            color: var(--it-common-white);
+            @media #{$lg,$md,$xs}{
+                font-size: 14px;
+            }
+        }
+    }
+    &-shape {
+        &-1 {
+            position: absolute;
+            top: -24%;
+            left: 0;
+            z-index: -1;
+            -webkit-animation: movingleftright1 infinite 20000ms;
+            animation: movingleftright1 infinite 20000ms;
+        }
+        &-2 {
+            position: absolute;
+            bottom: -26%;
+            right: 6%;
+            z-index: -1;
+            -webkit-animation: movingleftright2 infinite 20000ms;
+            animation: movingleftright2 infinite 20000ms;
+        }
+    }
+}
+.ma-about {
+    &-style{
+        @media #{$lg,$md,$xs}{
+            padding: 120px 0;
+            padding-bottom: 0;
+        }
+        & .ss-about-funfact-item h5 {
+            font-weight: 700;
+            font-size: 42px;
+            letter-spacing: -0.05em;
+            color: var(--it-theme-4);
+        }
+        & .ss-about-funfact-item span {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.6;
+            color: rgba($color: #143230, $alpha: .8);
+        } 
+        & .ss-about-right {
+            margin-left: 0px;
+        }
+        & .ss-about-thumb {
+            margin-left: -35px;
+            @media #{$xl,$lg,$md,$xs}{
+                margin-left: 0;
+            }
+        }
+    }
+    &-left {
+        margin-right: 80px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background-color: #143230;
+        @media #{$lg,$md,$xs}{
+            margin-right: 0;
+        }
+    }
+    &-thumb {
+        & img {
+            border-radius: 12px;
+        }
+    }
+    &-shape{
+        &-1 {
+            position: absolute;
+            bottom: 17%;
+            right: 7%;
+            z-index: -1;
+        }
+    }
+}
+
+.ma-about {
+    &-line {
+        @media #{$xs}{
+            display: none;
+        }
+        & span {
+            & svg {
+                width: 100%;
+            }
+        }
+    }
+    &-pb {
+        padding-bottom: 150px;
+        @media #{$lg,$md,$xs}{
+            padding-bottom: 100px;
+        }
+        @media #{$xs}{
+            padding-bottom: 0px;
+        }
+    }
+}
+
+
+// inner css here
+.it-about-details {
+    &-thumb {
+        & img {
+            width: 100%;
+            border-radius: 30px;
+        }
+    }
+    &-area {
+        & .dt-section-subtitle {
+            color: var(--it-theme-1);
+        }
+    }
+    &-nav {
+        &-button {
+            & ul {
+                & li {
+                    & button {
+                        font-weight: 500;
+                        font-size: 20px;
+                        padding: 20px 70px;
+                        color: var(--it-common-white);
+                        background-color: #01103D;
+                        transition: .3s;
+                        &:hover {
+                            color: var(--it-common-white);
+                            background-color: var(--it-theme-1);
+                        }
+                        &.active {
+                            color: var(--it-common-white);
+                            background-color: var(--it-theme-1);
+                        }
+                    }
+                }
+            }
+        }
+        &-content {
+            & p {
+                font-weight: 400;
+                font-size: 20px;
+            }
+        }
+    }
+}

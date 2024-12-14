@@ -1,0 +1,244 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  08. career css start
+/*----------------------------------------*/
+.it-career {
+    &-area {
+        background: linear-gradient(180deg, #f1f5ff 0%, rgba(241, 245, 255, 0) 100%);
+    }
+    &-title {
+        font-weight: 600;
+        font-size: 22px;
+        color: #000;
+        margin-bottom: 12px;
+    }
+    &-meta {
+        margin-bottom: 30px;
+        & span {
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.01em;
+            & i,svg {
+                display: inline-block;
+                margin-right: 3px;
+            }
+            &:not(:last-child){
+                margin-right: 15px;
+            }
+        }
+    }
+    &-item {
+        border: 1px solid #189C84;
+        background-color: var(--it-common-white);
+        border-radius: 30px;
+        padding: 40px 40px;
+        padding-bottom: 50px;
+        transition: .3s;
+        & p {
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+        & .it-btn {
+            background-color: #F1F5FF;
+            color: var(--it-theme-1);
+            border: 1px solid var(--it-theme-1);
+            padding: 15.4px 38px;
+            box-shadow: none;
+            &::after{
+                background-color: var(--it-theme-1);
+            }
+            &:hover {
+                color: var(--it-common-white);
+            }
+        }
+        &:hover {
+            box-shadow: 0 20px 30px 0 rgba(1, 6, 20, 0.1);
+        }
+    }
+    &-list {
+        & a {
+            font-weight: 400;
+            font-size: 14px;
+            text-transform: capitalize;
+            display: inline-block;
+            border-radius: 5px;
+            padding: 7px 20px;
+            background-color: #F1F5FF;
+            transition: .3s;
+            &:not(:last-child){
+                margin-right: 17px;
+            }
+            &:hover {
+                color: var(--it-common-white);
+                background-color: var(--it-theme-1);
+            }
+        }
+    }
+    &-details {
+        &-thumb {
+            & img {
+                border-radius: 10px;
+            }
+            &-content {
+                border-bottom: 1px solid #5F6168;
+            }
+        }
+        &-title {
+            font-weight: 600;
+            font-size: 35px;
+            text-transform: capitalize;
+        }
+        &-list {
+            & ul {
+                & li {
+                    list-style-type: none;
+                    padding-left: 28px;
+                    position: relative;
+                    &:not(:last-child){
+                        margin-bottom: 18px;
+                    }
+                    & span {
+                        & svg,i {
+                            position: absolute;
+                            top: 2px;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &-text {
+            border-bottom: 1px solid rgba($color: #5F6168, $alpha: .5);
+            & span {
+                font-weight: 400;
+                font-size: 16px;
+                display: block;
+                font-family: var(--it-ff-roboto);
+                margin-bottom: 20px;
+                line-height: 1.6;
+                & i {
+                    font-weight: 600;
+                    font-style: normal;
+                    display: inline-block;
+                    margin-right: 5px;
+                    color: var(--it-common-black);
+                }
+            }
+        }
+        &-social {
+            & span {
+                font-weight: 500;
+                font-size: 30px;
+                color: var(--it-common-black);
+            }
+            & a {
+                margin-left: 18px;
+                color: var(--it-common-black);
+                transition: .3s;
+                &:hover {
+                    color: var(--it-theme-1);
+                }
+            }
+        }
+        &-left {
+            margin-right: 120px;
+        }
+        &-right {
+            margin-left: -33px;
+        }
+        &-map {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba($color: #5F6168, $alpha: .5);
+            & iframe {
+                width: 100%;
+                height: 300px;
+            }
+        }
+        &-contact {
+            & ul {
+                & li {
+                    display: block;
+                    list-style-type: none;
+                    &:not(:last-child){
+                        margin-bottom: 18px;
+                    }
+                    & span {
+                        font-weight: 400;
+                        font-size: 16px;
+                        position: relative;
+                        display: inline-block;
+                        padding-left: 30px;
+                        transition: .3s;
+                        & i,svg {
+                            position: absolute;
+                            top: 2px;
+                            left: 0;                
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-sidebar {
+        &-widget {
+            &-icon {
+                height: 90px;
+                width: 90px;
+                line-height: 90px;
+                text-align: center;
+                background-color: #F1F5FF;
+                border: 1px solid rgba(1, 16, 61, 0.1);
+                border-radius: 5px;
+                flex: 0 0 auto;
+            }
+            &-content {
+                & h5 {
+                    font-weight: 700;
+                    font-size: 20px;
+                    text-transform: capitalize;
+                }
+                & span {
+                    font-weight: 400;
+                    font-size: 14px;
+                    display: block;
+                    margin-top: 3px;
+                }
+                & a {
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: var(--it-theme-1);
+                }
+            }
+            &.style-2 {
+                padding: 15px 20px;
+                border: 1px solid rgba(1, 16, 61, 0.1);
+                border-radius: 5px;
+                & .it-career-sidebar-widget-icon {
+                    height: 55px;
+                    width: 55px;
+                    line-height: 48px;
+                }
+                & .it-career-sidebar-widget-content span {
+                    font-weight: 400;
+                    font-size: 12px;
+                    display: inline-block;
+                    letter-spacing: 0.01em;
+                }
+                & .it-career-meta {
+                    margin-top: 3px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        &-title {
+            font-weight: 700;
+            font-size: 26px;
+            text-transform: capitalize
+        }
+    }
+}

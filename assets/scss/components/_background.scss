@@ -1,0 +1,38 @@
+@use '../utils' as *;
+
+/*---------------------------------------*/
+/*Background color
+/*-----------------------------------------*/
+
+
+.black-bg {
+	background: var(--it-common-black);
+}
+.black-2-bg {
+	background: var(--it-common-black-2);
+}
+.white-bg {
+	background: var(--it-common-white);
+}
+.theme-bg {
+	background: var(--it-theme-1);
+}
+.theme-2-bg {
+	background: var(--it-theme-2);
+}
+.dark-green-bg {
+	background: var(--it-common-dark-green);
+}
+.green-bg {
+	background: var(--it-theme-3);
+}
+.blue-bg {
+	background: var(--it-common-blue);
+}
+.gray-bg {
+	background: var(--it-gray-1);
+}
+.gray-bg-2 {
+	background: var(--it-gray-2);
+}
+

@@ -1,0 +1,70 @@
+@use '../utils' as *;
+
+.it-breadcrumb {
+    &-ptb {
+        padding-top: 204px;
+        padding-bottom: 144px;
+    }
+    &-title{
+        font-weight: 700;
+        font-size: 45px;
+        color: #0c1e1b;
+        font-family: var(--it-ff-roboto);
+        text-transform: capitalize;
+        margin-bottom: 21px;    
+        @media #{$lg}{
+            font-size: 38px;
+        } 
+        @media #{$md}{
+            font-size: 43px;
+        } 
+        @media #{$xs}{
+            font-size: 37px;
+        } 
+        @media #{$sm}{
+            font-size: 30px;
+        } 
+    }
+    &-content {
+        @media #{$xs}{
+            margin-bottom: 30px;
+        } 
+        @media #{$sm}{
+            margin-bottom:0px;
+        } 
+    }
+    &-list{
+        display: inline-block;
+        border-radius: 30px;
+        & span {
+            font-weight: 600;
+            font-size: 18px;
+            font-weight: 500;
+            color: #5F6168;
+            text-transform: capitalize;
+            @media #{$lg,$md,$xs}{
+                font-size: 14px;
+            }
+            &.dvdr{
+                margin: 0 21px;
+                color: #5F6168;
+            }
+        }
+        & i {
+            font-weight: 600;
+            font-size: 18px;
+            font-weight: 500;
+            color: #746fff;
+            font-style: normal;
+            text-transform: capitalize;
+        }
+    }
+    &-thumb {
+        position: absolute;
+        bottom: 0;
+        right: 15%;
+        z-index: -1;
+    }
+}
+
+

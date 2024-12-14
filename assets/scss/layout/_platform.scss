@@ -1,0 +1,57 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  08. platform css start
+/*----------------------------------------*/
+.cr-platform {
+    &-bg {
+        background-color: #143230;
+        @media #{$xl,$lg,$md,$xs}{
+            padding: 120px 0;
+        }
+    }
+    &-item {
+        padding: 60px 30px;
+        padding-bottom: 55px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 0.1);
+        & p {
+            font-weight: 400;
+            font-size: 14px;
+            margin-bottom: 0;
+            line-height: 1.7;
+            color: var(--it-common-white);
+        }
+    }
+    &-title {
+        font-weight: 700;
+        font-size: 22px;
+    }
+    &-shape {
+        &-1 {
+            position: absolute;
+            top: 22%;
+            right: 10%;
+            z-index: -1;
+            -webkit-animation: animationglob 50s cubic-bezier(1, 0.99, 0.03, 0.01) infinite;
+            animation: animationglob 4s cubic-bezier(1, 0.99, 0.03, 0.01) infinite;
+            @media #{$md,$xs}{
+                display: none;
+            }
+        }
+        &-2 {
+            position: absolute;
+            top: 15%;
+            left: 6%;
+            z-index: -1;
+            @media #{$lg}{
+                transform: scale(.6);
+            }
+            @media #{$md,$xs}{
+                display: none;
+            }
+        }
+    }
+}
+

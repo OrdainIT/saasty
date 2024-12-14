@@ -1,0 +1,120 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  32. team css start
+/*----------------------------------------*/
+
+.it-team {
+    &-mlr {
+        margin: 0 55px;
+        border-radius: 50px;
+        background-color: #F1F5FF;
+        & .dt-section-subtitle {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #746fff;
+        }
+    }
+    &-thumb {
+        text-align: center;
+        margin-bottom: 30px;
+        & img {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+        }
+    }
+    &-item {
+        padding: 30px;
+        border: 1px solid rgba(1, 16, 61, 0.2);
+        border-radius: 30px;
+        position: relative;
+        z-index: 2;
+        &::after{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            content: '';
+            border-radius: 30px;
+            z-index: -1;
+            transition: .4s;
+            opacity: 1;
+            visibility: hidden;
+            background-color: var(--it-theme-6);
+        }
+        &:hover {
+            &::after {
+                opacity: 1;
+                visibility: visible;
+                height: 100%;
+            }
+            & .it-team-title {
+                color: var(--it-common-white);
+            }
+            & .it-team-content {
+                & span {
+                    color: var(--it-common-white);
+                }
+            }
+            & .it-team-social-box {
+                & a {
+                    color: var(--it-common-white);
+                }
+            }
+        }
+    }
+    &-title {
+        font-weight: 700;
+        font-size: 22px;
+        margin-bottom: 5px;
+        transition: .3s;
+        color: var(--it-common-black);
+        @media #{$xl}{
+            font-size: 18px;
+        }
+    }
+    &-content {
+        & span {
+            font-weight: 500;
+            font-size: 14px;
+            transition: .3s;
+            @media #{$xl}{
+                font-size: 12px;
+            }
+        }
+    }
+    &-social-box {
+        margin-top: 25px;
+        & a {
+            font-weight: 400;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: var(--it-common-black);
+            margin: 0 12px;
+            transition: .3s;
+            &:hover {
+                color: #FFCE5A;
+            }
+        }
+    }
+    &-btn {
+        & p {
+            @media #{$lg,$md,$xs}{
+                font-size: 15px;
+                & br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.it-team-inner-style {
+    & .it-team-item {
+        background-color: #F1F5FF;
+    }
+}

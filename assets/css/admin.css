@@ -1,0 +1,50 @@
+td.review_rating {
+  list-style: none;
+}
+
+/* Rating css  */
+td.review_rating {
+  font-weight: 700;
+}
+
+td.review_rating li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: end;
+}
+
+td.review_rating li > span {
+  font-size: 12px;
+  font-weight: 500;
+  display: block;
+  width: calc(50%);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+td.review_rating li .rating {
+  width: calc(50% - 10px);
+}
+
+td.review_rating li .rating span {
+  width: 10px;
+  height: 10px;
+  font-size: 10px;
+}
+
+.turio_tour_action[value="reject"] {
+  background: transparent;
+  border: none;
+  color: #996800;
+  cursor: pointer;
+}
+
+.turio_tour_action[value="approve"] {
+  background: transparent;
+  border: none;
+  color: #007017;
+  cursor: pointer;
+}

@@ -1,0 +1,37 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  34. test-slider css start
+/*----------------------------------------*/
+
+
+.it-text{
+    &-slider{
+        &-item {
+            & span {
+                font-weight: 900;
+                font-size: 120px;
+                line-height: 1;
+                text-transform: uppercase;
+                display: inline-block;
+                color: transparent;
+                font-family: var(--it-ff-roboto);
+                -webkit-text-stroke: 1px rgba($color: #fff, $alpha: .2 );
+            }
+            & img {
+                margin: 0 50px;
+                transform: translateY(-42px);
+            }
+        }
+    
+    }
+    &-active{
+        & .slider-transtion {
+            -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+        }
+        & .swiper-slide{
+            width: auto;
+        }
+    }
+}
