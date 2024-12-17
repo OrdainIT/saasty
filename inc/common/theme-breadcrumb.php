@@ -119,4 +119,17 @@ function saasty_breadcrumb_func()
     }
 }
 
-add_action('saasty_before_main_content', 'saasty_breadcrumb_func');
+add_action('saasty_breadcrumb_content', 'saasty_breadcrumb_func');
+
+// Before Main Wrapper
+
+// Add smooth-wrapper and smooth-content before main content
+add_action('saasty_before_main_content', function () {
+    echo '<div id="smooth-wrapper">';
+    echo '  <div id="smooth-content">';
+});
+// After Main Content
+add_action('saasty_after_main_content', function () {
+    echo '  </div>'; // Close smooth-content
+    echo '</div>';   // Close smooth-wrapper
+});

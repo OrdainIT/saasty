@@ -89,6 +89,9 @@
     <?php do_action('saasty_header_style'); ?>
     <!-- header end -->
 
+    <!-- Before main Smooth Wrapper -->
 
-    <!-- wrapper-box start -->
     <?php do_action('saasty_before_main_content'); ?>
+
+    <!-- Breadcrumb_wrapper -->
+    <?php do_action('saasty_breadcrumb_content'); ?>

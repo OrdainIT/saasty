@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -9,9 +10,13 @@
  * @package saasty
  */
 
-do_action( 'saasty_footer_style' );
+do_action('saasty_footer_style');
 
-wp_footer();?>
-    </body>
+// After main Smooth Wrapper
+
+do_action('saasty_after_main_content');
+
+wp_footer(); ?>
+</body>
+
 </html>
- 

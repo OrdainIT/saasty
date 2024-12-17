@@ -241,6 +241,7 @@ add_action(
                     'section'     => 'saasty_theme_color',
                     'priority'    => 10,
                     'transport'   => 'auto',
+                    'default'     => '#7771F7',
                     'output'      => [
                         [
                             'element'  => ':root',
@@ -255,11 +256,76 @@ add_action(
                     'label'       => __('Theme Color 2', 'saasty'),
                     'section'     => 'saasty_theme_color',
                     'priority'    => 10,
+                    'default'     => '#189C84',
                     'transport'   => 'auto',
                     'output'      => [
                         [
                             'element'  => ':root',
                             'property' => '--it-theme-2',
+                        ],
+                    ],
+                ]
+            );
+            new \Kirki\Field\Color(
+                [
+                    'settings'    => 'saasty_secoundary_scolor',
+                    'label'       => __('Theme Color 3', 'saasty'),
+                    'section'     => 'saasty_theme_color',
+                    'priority'    => 10,
+                    'default'     => '#085442',
+                    'transport'   => 'auto',
+                    'output'      => [
+                        [
+                            'element'  => ':root',
+                            'property' => '--it-theme-3',
+                        ],
+                    ],
+                ]
+            );
+            new \Kirki\Field\Color(
+                [
+                    'settings'    => 'saasty_secoundary_scolor1',
+                    'label'       => __('Theme Color 4', 'saasty'),
+                    'section'     => 'saasty_theme_color',
+                    'priority'    => 10,
+                    'default'     => '#1fe290',
+                    'transport'   => 'auto',
+                    'output'      => [
+                        [
+                            'element'  => ':root',
+                            'property' => '--it-theme-4',
+                        ],
+                    ],
+                ]
+            );
+            new \Kirki\Field\Color(
+                [
+                    'settings'    => 'saasty_secoundary_scolor2',
+                    'label'       => __('Theme Color 5', 'saasty'),
+                    'section'     => 'saasty_theme_color',
+                    'priority'    => 10,
+                    'default'     => '#3b37f4',
+                    'transport'   => 'auto',
+                    'output'      => [
+                        [
+                            'element'  => ':root',
+                            'property' => '--it-theme-5',
+                        ],
+                    ],
+                ]
+            );
+            new \Kirki\Field\Color(
+                [
+                    'settings'    => 'saasty_secoundary_scolor3',
+                    'label'       => __('Theme Color 6', 'saasty'),
+                    'section'     => 'saasty_theme_color',
+                    'priority'    => 10,
+                    'default'     => '#746fff',
+                    'transport'   => 'auto',
+                    'output'      => [
+                        [
+                            'element'  => ':root',
+                            'property' => '--it-theme-6',
                         ],
                     ],
                 ]

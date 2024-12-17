@@ -64,8 +64,10 @@ function saasty_theme_colors()
         :root {
             --it-theme-1: <?php echo esc_attr(get_theme_mod('saasty_theme_pcolor', '#1B4CC3')); ?>;
             --it-theme-2: <?php echo esc_attr(get_theme_mod('saasty_theme_scolor', '#FF8A71')); ?>;
-            --it-theme-3: <?php echo esc_attr(get_theme_mod('saasty_secoundary_scolor', '#EF5D3C')); ?>;
-            --it-theme-3: <?php echo esc_attr(get_theme_mod('saasty_secoundary_scolor1', '#E22D03')); ?>;
+            --it-theme-3: <?php echo esc_attr(get_theme_mod('saasty_secoundary_scolor', '#085442')); ?>;
+            --it-theme-4: <?php echo esc_attr(get_theme_mod('saasty_secoundary_scolor1', '#1fe290')); ?>;
+            --it-theme-5: <?php echo esc_attr(get_theme_mod('saasty_secoundary_scolor2', '#3b37f4')); ?>;
+            --it-theme-6: <?php echo esc_attr(get_theme_mod('saasty_secoundary_scolor3', '#746fff')); ?>;
         }
     </style>
     <?php
