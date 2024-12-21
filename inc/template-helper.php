@@ -93,11 +93,39 @@ function saasty_check_header()
         get_template_part('template-parts/header/header-1');
     } elseif ($saasty_header_style == 'header-style-22' && empty($_GET['s'])) {
         get_template_part('template-parts/header/header-2');
+    } elseif ($saasty_header_style == 'header-style-33' && empty($_GET['s'])) {
+        get_template_part('template-parts/header/header-3');
+    } elseif ($saasty_header_style == 'header-style-44' && empty($_GET['s'])) {
+        get_template_part('template-parts/header/header-4');
+    } elseif ($saasty_header_style == 'header-style-55' && empty($_GET['s'])) {
+        get_template_part('template-parts/header/header-5');
+    } elseif ($saasty_header_style == 'header-style-66' && empty($_GET['s'])) {
+        get_template_part('template-parts/header/header-6');
+    } elseif ($saasty_header_style == 'header-style-77' && empty($_GET['s'])) {
+        get_template_part('template-parts/header/header-7');
+    } elseif ($saasty_header_style == 'header-style-88' && empty($_GET['s'])) {
+        get_template_part('template-parts/header/header-8');
+    } elseif ($saasty_header_style == 'header-style-99' && empty($_GET['s'])) {
+        get_template_part('template-parts/header/header-9');
     } else {
 
         /** default header style **/
         if ($saasty_default_header_style == 'header-style-22') {
             get_template_part('template-parts/header/header-2');
+        } elseif ($saasty_default_header_style == 'header-style-33') {
+            get_template_part('template-parts/header/header-3');
+        } elseif ($saasty_default_header_style == 'header-style-44') {
+            get_template_part('template-parts/header/header-4');
+        } elseif ($saasty_default_header_style == 'header-style-55') {
+            get_template_part('template-parts/header/header-5');
+        } elseif ($saasty_default_header_style == 'header-style-66') {
+            get_template_part('template-parts/header/header-6');
+        } elseif ($saasty_default_header_style == 'header-style-77') {
+            get_template_part('template-parts/header/header-7');
+        } elseif ($saasty_default_header_style == 'header-style-88') {
+            get_template_part('template-parts/header/header-8');
+        } elseif ($saasty_default_header_style == 'header-style-99') {
+            get_template_part('template-parts/header/header-9');
         } else {
             get_template_part('template-parts/header/header-1');
         }
@@ -435,6 +463,20 @@ function saasty_check_footer()
         get_template_part('template-parts/footer/footer-1');
     } elseif ($edunity_footer_styles == 'footer-style-2') {
         get_template_part('template-parts/footer/footer-2');
+    } elseif ($edunity_footer_styles == 'footer-style-3') {
+        get_template_part('template-parts/footer/footer-3');
+    } elseif ($edunity_footer_styles == 'footer-style-4') {
+        get_template_part('template-parts/footer/footer-4');
+    } elseif ($edunity_footer_styles == 'footer-style-5') {
+        get_template_part('template-parts/footer/footer-5');
+    } elseif ($edunity_footer_styles == 'footer-style-6') {
+        get_template_part('template-parts/footer/footer-6');
+    } elseif ($edunity_footer_styles == 'footer-style-7') {
+        get_template_part('template-parts/footer/footer-7');
+    } elseif ($edunity_footer_styles == 'footer-style-8') {
+        get_template_part('template-parts/footer/footer-8');
+    } elseif ($edunity_footer_styles == 'footer-style-9') {
+        get_template_part('template-parts/footer/footer-9');
     } else {
 
         /** default footer style **/

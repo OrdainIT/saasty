@@ -81,6 +81,7 @@ function saasty_breadcrumb_func()
 
         // Theme options
         $bg_img = get_theme_mod('breadcrumb_image');
+        $breadcrumb_thumb_shap = get_theme_mod('breadcrumb_thumb_shap');
         $breadcrumb_switcher = get_theme_mod('breadcrumb_switcher', true);
 
         // Check to hide or show background image
@@ -94,19 +95,23 @@ function saasty_breadcrumb_func()
         // Output breadcrumb HTML if the switcher is on
         if (!empty($breadcrumb_switcher)) { ?>
 
-            <div class="it-breadcrumb-area it-breadcrumb-bg" data-background="<?php echo esc_url($bg_img); ?>">
+            <!-- breadcrumb-area-start -->
+            <div class="it-breadcrumb-area it-breadcrumb-ptb z-index-1 fix p-relative" data-background="<?php echo esc_url($bg_img); ?>">
+                <div class="it-breadcrumb-thumb">
+                    <img src="<?php echo esc_url($breadcrumb_thumb_shap, 'saasty'); ?>" alt="">
+                </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="it-breadcrumb-content">
+                        <div class="col-lg-12">
+                            <div class="it-breadcrumb-content z-index-3">
                                 <div class="it-breadcrumb-title-box">
                                     <h3 class="it-breadcrumb-title"><?php echo esc_html($title); ?></h3>
                                 </div>
-                                <div class="it-breadcrumb-list-wrap text-center">
-                                    <div class="it-breadcrumb-list-content">
+                                <div class="it-breadcrumb-list-wrap">
+                                    <div class="it-breadcrumb-list">
                                         <span><a href="<?php echo esc_url(home_url()); ?>"><?php echo esc_html__('Home', 'saasty'); ?></a></span>
-                                        <span class="dvdr"><?php echo esc_html__('//', 'saasty'); ?></span>
-                                        <span><?php echo esc_html($title); ?></span>
+                                        <span class="dvdr"><?php echo esc_html__('-', 'saasty'); ?></span>
+                                        <i><?php echo esc_html($title); ?></i>
                                     </div>
                                 </div>
                             </div>
@@ -114,6 +119,9 @@ function saasty_breadcrumb_func()
                     </div>
                 </div>
             </div>
+            <!-- breadcrumb-area-end -->
+
+
 
 <?php }
     }

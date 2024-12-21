@@ -647,3 +647,100 @@
 .it-tab-hide {
     display: none;
 }
+
+// plan css start
+.it-plan {
+    &-wrap {
+        border-radius: 10px;
+    }
+    &-title {
+        font-weight: 700;
+        font-size: 22px;
+        color: #000;
+        margin-bottom: 0;
+        padding-left: 35px;
+        margin-right: 27px;
+        border-right: 1px solid #BCBDC0;
+    }
+    &-head {
+        & ul {
+            display: flex;
+            & li {
+                list-style-type: none;
+                display: inline-block;
+                width: 25%;
+                text-align: center;
+                &:first-child {
+                    & span {
+                        background: linear-gradient(90deg, #0bcf77 0%, #69d619 100%);
+                    }
+                }
+                &:nth-child(2) {
+                    & span {
+                        background: var(--it-theme-1);
+                    }
+                }
+                &:nth-child(3) {
+                    & span {
+                        background: #295DFB;
+                    }
+                }
+                &:nth-child(4) {
+                    & span {
+                        background: #FFCE5A;
+                    }
+                }
+            }
+        }
+    }
+    &-item {
+        & span {
+            font-weight: 600;
+            font-size: 14px;
+            text-align: center;
+            display: inline-block;
+            padding: 9px 21px;
+            border-radius: 10px;
+            letter-spacing: -0.02em;
+            color: var(--it-common-white);
+        }
+    }
+    &-top {
+        &-box {
+            padding-left: 40px;
+            border-radius: 10px 10px 0 0;
+            background-color: #F1F5FF;
+        }
+        &-height {
+            height: 68px;
+        }
+    }
+    &-bottom {
+        & ul {
+            display: flex;
+            & li {
+                list-style-type: none;
+                display: inline-block;
+                width: 25%;
+                text-align: center;
+            }
+        }
+        &-title {
+            padding-right: 20px;
+            position: relative;
+        }
+        &-title-sm {
+            font-weight: 400;
+            font-size: 17px;
+            color: var(--it-common-black);
+        }
+    }
+    &-height {
+        height: 80px;
+        line-height: 80px;
+        padding-left: 40px;
+        &:nth-child(2n){
+            background-color: #F1F5FF;  
+        }
+    }
+}

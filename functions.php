@@ -303,26 +303,19 @@ if (!function_exists('saasty_comment')) {
         $replayClass = 'comment-depth-' . esc_attr($depth);
 ?>
         <li id="comment-<?php comment_ID(); ?>">
+            <div class="postbox-comment-user p-relative d-flex align-items-center">
+                <div class="postbox-user-thumb">
+                    <?php
+                    $avatar_url = get_avatar_url($comment, ['size' => 102]);
 
-            <div class="postbox-comment-item">
-                <div class="postbox-comment-content mb-25 d-sm-flex align-items-center justify-content-between">
-                    <div class="postbox-comment-user d-flex align-items-center">
-                        <div class="postbox-user-thumb">
-                            <?php
-                            $avatar_url = get_avatar_url($comment, ['size' => 102]);
-                            if (!empty($avatar_url)): ?>
-                                <img src="<?php echo esc_url($avatar_url); ?>" alt="">
-                            <?php else: ?>
-                                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/avatar/avata-3.png'); ?>" alt="">
-                            <?php endif; ?>
-                        </div>
-                        <div class="postbox-user-info">
-                            <h4 class="user-title"><?php print get_comment_author_link(); ?></h4>
-                            <span><?php comment_time(get_option('date_format')); ?></span>
-                        </div>
-                    </div>
+                    ?>
+
+                    <img src="<?php echo esc_url($avatar_url); ?>" alt="">
+
                 </div>
-                <div class="postbox-comment-text">
+                <div class="postbox-user-info">
+                    <h4 class="user-title"><?php print get_comment_author_link(); ?></h4>
+                    <span><?php comment_time(get_option('date_format')); ?></span>
                     <p><?php comment_text(); ?></p>
                 </div>
                 <?php

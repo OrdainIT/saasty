@@ -518,7 +518,7 @@ add_action(
                     'settings' => 'header_right_btn_text',
                     'label'    => esc_html__('Button Text', 'saasty'),
                     'section'  => 'saasty_header_right_settings',
-                    'default'  => esc_html__('Contact Us', 'saasty'),
+                    'default'  => esc_html__('Get Started', 'saasty'),
                     'priority' => 10,
                 ]
             );
@@ -526,6 +526,37 @@ add_action(
                 [
                     'settings' => 'header_right_btn_url',
                     'label'    => esc_html__('Button URL', 'saasty'),
+                    'section'  => 'saasty_header_right_settings',
+                    'default'  => esc_html__('#', 'saasty'),
+                    'priority' => 10,
+                ]
+            );
+
+            new \Kirki\Field\Checkbox_Switch(
+                [
+                    'settings'    => 'header_right_btn_login_switcher',
+                    'label'       => esc_html__('Login BTN Switcher', 'saasty'),
+                    'section'     => 'saasty_header_right_settings',
+                    'default'     => 'off',
+                    'choices'     => [
+                        'on'  => esc_html__('Enable', 'saasty'),
+                        'off' => esc_html__('Disable', 'saasty'),
+                    ],
+                ]
+            );
+            new \Kirki\Field\Text(
+                [
+                    'settings' => 'header_right_login_btn_text',
+                    'label'    => esc_html__('Login Text', 'saasty'),
+                    'section'  => 'saasty_header_right_settings',
+                    'default'  => esc_html__('Log In', 'saasty'),
+                    'priority' => 10,
+                ]
+            );
+            new \Kirki\Field\URL(
+                [
+                    'settings' => 'header_right_login_btn_url',
+                    'label'    => esc_html__('Log In URL', 'saasty'),
                     'section'  => 'saasty_header_right_settings',
                     'default'  => esc_html__('#', 'saasty'),
                     'priority' => 10,
@@ -609,7 +640,7 @@ add_action(
                     'label'       => esc_html__('Header Side Info Logo', 'saasty'),
                     'description' => esc_html__('Upload Your Logo Here', 'saasty'),
                     'section'     => 'saasty_header_side_info',
-                    'default'     => get_template_directory_uri() . '/assets/img/logo/logo.png',
+                    'default'     => get_template_directory_uri() . '/assets/img/logo/logo-2.png',
                 ]
             );
 
@@ -734,10 +765,20 @@ add_action(
             new \Kirki\Field\Image(
                 [
                     'settings'    => 'breadcrumb_image',
-                    'label'       => esc_html__('Breadcrumb Image', 'saasty'),
+                    'label'       => esc_html__('Breadcrumb BG Image', 'saasty'),
                     'description' => esc_html__('Upload Breadcrumb Image', 'saasty'),
                     'section'     => 'saasty_breadcrumb_settings',
-                    'default'      => get_template_directory_uri() . '/assets/img/breadcrumb/breadcrumb.jpg',
+                    'default'      => get_template_directory_uri() . '/assets/img/breadcrumb/breadcrumb-bg.jpg',
+                ]
+            );
+
+            new \Kirki\Field\Image(
+                [
+                    'settings'    => 'breadcrumb_thumb_shap',
+                    'label'       => esc_html__('Breadcrumb Thumbnail', 'saasty'),
+                    'description' => esc_html__('Upload Thumbnail Image', 'saasty'),
+                    'section'     => 'saasty_breadcrumb_settings',
+                    'default'      => get_template_directory_uri() . '/assets/img/breadcrumb/thumb-1.png',
                 ]
             );
 
@@ -901,21 +942,29 @@ add_action(
                 ]
             );
 
-            new \Kirki\Field\Radio_Image(
+
+            new \Kirki\Field\Select(
                 [
                     'settings'    => 'saasty_default_footer',
-                    'label'       => esc_html__('Choose Footer Style', 'saasty'),
+                    'label'       => esc_html__('Select Footer Style', 'saasty'),
                     'section'     => 'saasty_footer_settings',
-                    'default'     => 'left',
-                    'priority'    => 10,
-                    'multiple'    => 1,
-                    'choices'     => [
-                        'footer-style-1'   => get_template_directory_uri() . '/inc/img/footer/footer-1.png',
-                        'footer-style-2' => get_template_directory_uri() . '/inc/img/footer/footer-2.png',
-                    ],
                     'default'     => 'footer-style-1',
+                    'placeholder' => esc_html__('Select a Footer Style', 'saasty'),
+                    'choices'     => [
+                        'footer-style-1' => esc_html__('Footer Style 1', 'saasty'),
+                        'footer-style-2' => esc_html__('Footer Style 2', 'saasty'),
+                        'footer-style-3' => esc_html__('Footer Style 3', 'saasty'),
+                        'footer-style-4' => esc_html__('Footer Style 4', 'saasty'),
+                        'footer-style-5' => esc_html__('Footer Style 5', 'saasty'),
+                        'footer-style-6' => esc_html__('Footer Style 6', 'saasty'),
+                        'footer-style-7' => esc_html__('Footer Style 7', 'saasty'),
+                        'footer-style-8' => esc_html__('Footer Style 8', 'saasty'),
+                        'footer-style-9' => esc_html__('Footer Style 9', 'saasty'),
+                    ],
                 ]
             );
+
+
 
 
             new \Kirki\Field\Image(
@@ -925,6 +974,26 @@ add_action(
                     'description' => esc_html__('Upload Background Image.', 'saasty'),
                     'section'     => 'saasty_footer_settings',
                     'default'      => "",
+                ]
+            );
+
+            new \Kirki\Field\Image(
+                [
+                    'settings'    => 'saasty_footer_5_shap',
+                    'label'       => esc_html__('Footer 5 Shap', 'saasty'),
+                    'description' => esc_html__('Upload Shap Image.', 'saasty'),
+                    'section'     => 'saasty_footer_settings',
+                    'default'      => get_template_directory_uri() . '/assets/img/shape/footer-7-1.png',
+                ]
+            );
+
+            new \Kirki\Field\Image(
+                [
+                    'settings'    => 'saasty_footer_7_shap',
+                    'label'       => esc_html__('Footer 7 Shap', 'saasty'),
+                    'description' => esc_html__('Upload Shap Image.', 'saasty'),
+                    'section'     => 'saasty_footer_settings',
+                    'default'      => get_template_directory_uri() . '/assets/img/shape/footer-shape-9-1.png',
                 ]
             );
 
@@ -941,19 +1010,96 @@ add_action(
                     'settings' => 'footer_copywrite_text',
                     'label'    => esc_html__('Footer Copywrite Text', 'saasty'),
                     'section'  => 'saasty_footer_settings',
-                    'default'  => saasty_kses('Copyright © 2024 <span><a href="/">Travello</a></span> . All Rights Reserved Created by <span><a href="#">Ordianit</a></span>', 'saasty'),
+                    'default'  => saasty_kses('Copyright © 2024 <span><a href="/">Saasty</a></span> . All Rights Reserved Created by <span><a href="#">Ordianit</a></span>', 'saasty'),
+                    'priority' => 10,
+                ]
+            );
+
+            new \Kirki\Field\Checkbox_Switch(
+                [
+                    'settings'    => 'saasty_footer_social_switcher',
+                    'label'       => esc_html__('Footer Right Area Show/Hide', 'saasty'),
+                    'section'     => 'saasty_footer_settings',
+                    'default'     => 'on',
+                    'choices'     => [
+                        'on'  => esc_html__('Enable', 'saasty'),
+                        'off' => esc_html__('Disable', 'saasty'),
+                    ],
+                ]
+            );
+            new \Kirki\Field\Textarea(
+                [
+                    'settings' => 'footer__bottom_right_text',
+                    'label'    => esc_html__('Footer Bottom Right Text', 'saasty'),
+                    'section'  => 'saasty_footer_settings',
+                    'default'  => saasty_kses('Social media', 'saasty'),
                     'priority' => 10,
                 ]
             );
             new \Kirki\Field\Textarea(
                 [
-                    'settings' => 'footer__text2',
+                    'settings' => 'footer__bottom_right_three_text',
                     'label'    => esc_html__('Footer Bottom Right Text', 'saasty'),
+                    'description' => esc_html__('Only For Footer Style 2'),
                     'section'  => 'saasty_footer_settings',
-                    'default'  => saasty_kses('<a href="#">Privacy & Policy || Terms & Conditions</a>', 'saasty'),
+                    'default'  => saasty_kses(' <div class="it-copyright-link">
+                              <a class="border-line-black" href="#">Privacy & Terms.</a>
+                              <a class="border-line-black" href="#">Contact Us</a>
+                           </div>', 'saasty'),
                     'priority' => 10,
                 ]
             );
+
+            new \Kirki\Field\Text(
+                [
+                    'settings' => 'saasty_footer_facebook_url',
+                    'label'    => esc_html__('Facebook URL', 'saasty'),
+                    'section'  => 'saasty_footer_settings',
+                    'default'  => esc_html__('#', 'saasty'),
+                    'priority' => 10,
+                ]
+            );
+            new \Kirki\Field\Text(
+                [
+                    'settings' => 'saasty_footer_twitter_url',
+                    'label'    => esc_html__('Twitter URL', 'saasty'),
+                    'section'  => 'saasty_footer_settings',
+                    'default'  => esc_html__('#', 'saasty'),
+                    'priority' => 10,
+                ]
+            );
+            new \Kirki\Field\Text(
+                [
+                    'settings' => 'saasty_footer_instagram_url',
+                    'label'    => esc_html__('Instagram URL', 'saasty'),
+                    'section'  => 'saasty_footer_settings',
+                    'default'  => esc_html__('#', 'saasty'),
+                    'priority' => 10,
+                ]
+            );
+            new \Kirki\Field\Text(
+                [
+                    'settings' => 'saasty_footer_youtube_url',
+                    'label'    => esc_html__('Youtube URL', 'saasty'),
+                    'section'  => 'saasty_footer_settings',
+                    'default'  => esc_html__('#', 'saasty'),
+                    'priority' => 10,
+                ]
+            );
+
+            new \Kirki\Field\Image(
+                [
+                    'settings'    => 'saasty_footer_1_bg_image',
+                    'label'       => esc_html__('Footer  BG Image', 'saasty'),
+                    'description' => esc_html__('The saved value will be the URL.', 'saasty'),
+                    'section'     => 'saasty_footer_settings',
+                    'default'     => '',
+                ]
+            );
+
+
+
+
 
 
 
@@ -970,6 +1116,92 @@ add_action(
                 ]
             );
         };
+
+        new \Kirki\Field\Checkbox_Switch(
+            [
+                'settings'    => 'footer_style_three_switcher',
+                'label'       => esc_html__('Footer Style 3 On/Off', 'saasty'),
+                'section'     => 'saasty_footer_settings',
+                'default'     => 'off',
+                'choices'     => [
+                    'on'  => esc_html__('Enable', 'saasty'),
+                    'off' => esc_html__('Disable', 'saasty'),
+                ],
+            ]
+        );
+        new \Kirki\Field\Checkbox_Switch(
+            [
+                'settings'    => 'footer_style_four_switcher',
+                'label'       => esc_html__('Footer Style 4 On/Off', 'saasty'),
+                'section'     => 'saasty_footer_settings',
+                'default'     => 'off',
+                'choices'     => [
+                    'on'  => esc_html__('Enable', 'saasty'),
+                    'off' => esc_html__('Disable', 'saasty'),
+                ],
+            ]
+        );
+        new \Kirki\Field\Checkbox_Switch(
+            [
+                'settings'    => 'footer_style_five_switcher',
+                'label'       => esc_html__('Footer Style 5 On/Off', 'saasty'),
+                'section'     => 'saasty_footer_settings',
+                'default'     => 'off',
+                'choices'     => [
+                    'on'  => esc_html__('Enable', 'saasty'),
+                    'off' => esc_html__('Disable', 'saasty'),
+                ],
+            ]
+        );
+        new \Kirki\Field\Checkbox_Switch(
+            [
+                'settings'    => 'footer_style_six_switcher',
+                'label'       => esc_html__('Footer Style 6 On/Off', 'saasty'),
+                'section'     => 'saasty_footer_settings',
+                'default'     => 'off',
+                'choices'     => [
+                    'on'  => esc_html__('Enable', 'saasty'),
+                    'off' => esc_html__('Disable', 'saasty'),
+                ],
+            ]
+        );
+        new \Kirki\Field\Checkbox_Switch(
+            [
+                'settings'    => 'footer_style_seven_switcher',
+                'label'       => esc_html__('Footer Style 7 On/Off', 'saasty'),
+                'section'     => 'saasty_footer_settings',
+                'default'     => 'off',
+                'choices'     => [
+                    'on'  => esc_html__('Enable', 'saasty'),
+                    'off' => esc_html__('Disable', 'saasty'),
+                ],
+            ]
+        );
+        new \Kirki\Field\Checkbox_Switch(
+            [
+                'settings'    => 'footer_style_eight_switcher',
+                'label'       => esc_html__('Footer Style 8 On/Off', 'saasty'),
+                'section'     => 'saasty_footer_settings',
+                'default'     => 'off',
+                'choices'     => [
+                    'on'  => esc_html__('Enable', 'saasty'),
+                    'off' => esc_html__('Disable', 'saasty'),
+                ],
+            ]
+        );
+        new \Kirki\Field\Checkbox_Switch(
+            [
+                'settings'    => 'footer_style_nine_switcher',
+                'label'       => esc_html__('Footer Style 9 On/Off', 'saasty'),
+                'section'     => 'saasty_footer_settings',
+                'default'     => 'off',
+                'choices'     => [
+                    'on'  => esc_html__('Enable', 'saasty'),
+                    'off' => esc_html__('Disable', 'saasty'),
+                ],
+            ]
+        );
+
 
 
 

@@ -231,6 +231,9 @@
             position: absolute;
             top: 20%;
             left: 16%;
+            @media #{$xl}{
+                left: 5%;
+            }
             @media #{$lg}{
                 top: 30%;
                 transform: scale(.7);
@@ -241,8 +244,7 @@
             top: 51%;
             left: 23%;
             @media #{$xl}{
-                left: 18%;
-                transform: scale(.7);
+                left: 12%;
             }
             @media #{$lg}{
                 left: 7%;
@@ -553,6 +555,11 @@
     }
 }
 .it-testimonial-inner-style-2 {
+    &.pg-testimonial-area {
+        @media #{$lg,$md,$xs}{
+            padding-bottom: 0;
+        }
+    }
     & .it-testimonial-quote {
         border-radius: 0px;
         width: auto;
@@ -580,6 +587,9 @@
         border-bottom: 1.5px dashed #5F6168;
         & p {
             line-height: 1.7;
+            @media #{$xl,$lg,$md,$xs}{
+                font-size: 15px;
+            }
         }
     }
 }

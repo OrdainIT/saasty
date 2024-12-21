@@ -146,6 +146,13 @@
                 display: none;
             }
         }
+        @media #{$sm} {
+            padding-right: 30px;
+            font-size: 19px;
+            & br{
+                display: none;
+            }
+        }
         &::after {
             position: absolute;
             content: "\f068";
@@ -209,4 +216,21 @@
 
 .it-reveal-line {
 	overflow: hidden;
+}
+.it-faq-inner-style {
+    & .accordion-buttons {
+        @media #{$xl,$lg,$md}{
+            font-size: 19px;
+        }
+    }
+    & .accordion-body p {
+        @media #{$xl,$lg,$md,$xs}{
+            margin-right: 0;
+        }
+    }
+    & .pg-faq-wrap {
+        @media #{$md,$xs}{
+            margin-top: 70px;
+        }
+    }
 }

@@ -425,18 +425,22 @@
         & > nav{
             & > ul {
                 margin-left: 50px;
+                @media #{$xl}{
+                    margin-left: 90px;
+                }
                 & > li {                   
                     & > a {
                         padding: 50px 0;
-                        font-weight: 700;
                         font-size: 16px;
                         letter-spacing: 0.02em;
                         font-family: var(--it-ff-urbanist);
+                        @media #{$xl}{
+                            padding: 28px 0;
+                        }
                     }
                     & .submenu {
                         & li {
                             & a {
-                                font-weight: 700;
                                 font-size: 16px;
                                 letter-spacing: 0.02em;
                                 font-family: var(--it-ff-urbanist);

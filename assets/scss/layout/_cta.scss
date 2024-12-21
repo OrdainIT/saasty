@@ -494,3 +494,11 @@
         }
     }
 }
+// inner css here
+.it-cta-inner-style {
+    &.cr-cta-area {
+        @media #{$xs}{
+            padding-top: 0;
+        }
+    }
+}

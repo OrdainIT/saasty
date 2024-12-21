@@ -130,7 +130,6 @@
         }
     }
 }
-
 .ma-about {
     &-line {
         @media #{$xs}{
@@ -166,6 +165,7 @@
         & .dt-section-subtitle {
             color: var(--it-theme-1);
         }
+
     }
     &-nav {
         &-button {
@@ -178,6 +178,22 @@
                         color: var(--it-common-white);
                         background-color: #01103D;
                         transition: .3s;
+                        @media #{$xl,$lg}{
+                            font-size: 18px;
+                            padding: 17px 50px;
+                        }
+                        @media #{$lg,$md}{
+                            font-size: 16px;
+                            padding: 14px 35px;
+                        }
+                        @media #{$xs}{
+                            font-size: 14px;
+                            padding: 14px 24px;
+                        }
+                        @media #{$sm}{
+                            font-size: 16px;
+                            padding: 17px 40px;
+                        }
                         &:hover {
                             color: var(--it-common-white);
                             background-color: var(--it-theme-1);
@@ -194,6 +210,21 @@
             & p {
                 font-weight: 400;
                 font-size: 20px;
+                @media #{$xl,$lg,$md,$xs}{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    &-title-box {
+        @media #{$md,$xs}{
+            margin-bottom: 50px;
+        }
+        & p {
+            @media #{$xs}{
+                & br {
+                    display: none;
+                }
             }
         }
     }

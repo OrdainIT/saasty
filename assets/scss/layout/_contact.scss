@@ -5,7 +5,24 @@
 /*  08. contact css start
 /*----------------------------------------*/
 .it-contact {
+    &-area {
+        & .it-section-title {
+            @media #{$md}{                
+                font-size: 40px;
+            }
+            @media #{$xs}{                
+                font-size: 32px;
+            }
+        }
+    }
     &-inner {
+        &-left {
+            @media #{$md}{                
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
         &-list {
             & ul {
                 & li {
@@ -32,6 +49,15 @@
             }
         }
         &-social {
+            @media #{$xl,$lg}{
+                margin-bottom: 50px;
+            }
+            @media #{$md}{
+                margin-bottom: 0;
+            }
+            @media #{$xs}{
+                margin-bottom: 40px;
+            }
             & span {
                 font-weight: 700;
                 font-size: 20px;
@@ -59,18 +85,82 @@
                 }
             }
         }
-        &-right {
+        &-form-box {
             padding: 45px;
             padding-top: 35px;
             border-radius: 30px;
             background-color: #F1F5FF;
+            @media #{$lg}{
+                padding: 35px 28px;
+            }
+            @media #{$md}{
+                margin-top: 70px;
+            }
+            @media #{$xs}{
+                padding: 35px 28px;
+                margin-top: 70px;
+            }
+        }
+        &-icon {
+            border-radius: 20px;
+            width: 100px;
+            height: 100px;
+            line-height: 98px;
+            text-align: center;
+            display: inline-block;
+            margin-bottom: 25px;
+            background-color: var(--it-theme-1);
+            @media #{$lg,$md,$xs}{
+                width: 70px;
+                height: 70px;
+                line-height: 68px;
+            }
+            & svg {
+                @media #{$lg,$md,$xs}{
+                    width: 25px;
+                }
+            }
+        }
+        &-content {
+            & > span {
+                display: block;
+                font-weight: 600;
+                margin-bottom: 22px;
+                font-size: 20px;
+                color: #01103d;
+            }
+            & a {
+                display: block;
+                font-weight: 500;
+                font-size: 16px;
+                margin-bottom: 5px;
+                line-height: 1.6;
+                & span {
+                    transition: .3s;
+                    text-decoration: transparent;
+                    @media #{$xs}{                
+                        & br {
+                            display: none;
+                        }
+                    }
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        &-item {
+            border-right: 1px solid var(--it-theme-1);
+            @media #{$lg,$md,$xs}{
+                border-right: 0;
+            }
         }
     }
     &-input-box {
         & label {
             font-weight: 400;
             font-size: 16px;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
         & input {
             height: 60px;
@@ -78,24 +168,39 @@
             border: 1px solid rgba(1, 16, 61, 0.1);
             border-radius: 5px;
             background-color: var(--it-common-white);
+            @media #{$md,$xs}{                
+                height: 50px;
+                line-height: 50px;
+            }
             &:focus {
                 border: 1px solid var(--it-theme-1);
             }
+            &::placeholder {
+                font-weight: 400;
+                color: var(--it-text-body);
+            }
         }
     }
-    &-textarea-box  {
+    &-textarea-box {
         & label {
             font-weight: 400;
             font-size: 16px;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
         & textarea {
             border-radius: 5px;
             height: 200px;
             background-color: var(--it-common-white);
             border: 1px solid rgba(1, 16, 61, 0.1);
+            @media #{$md,$xs}{
+                height: 150px;
+            }
             &:focus {
                 border: 1px solid var(--it-theme-1);
+            }
+            &::placeholder {
+                font-weight: 400;
+                color: var(--it-text-body);
             }
         }
     }
@@ -106,8 +211,10 @@
             & label {
                 font-weight: 500;
                 font-size: 16px;
-                color: var(--it-common-black);
-
+                color: #01103d;
+                @media #{$xs}{
+                    font-size: 14px;
+                }
                 &:hover {
                     cursor: pointer;
                 }
@@ -137,15 +244,70 @@
                 padding: 0;
                 margin-right: 11px;
                 border: 1px solid var(--it-theme-1);
+                margin-top: -1px;
+                flex: 0 0 auto;
+                @media #{$lg,$md,$xs}{
+                    height: 18px;
+                    width: 18px;
+                }
             }
         }
     }
+}
+.it-contact-innar-style-2 {
+    & .row{
+        [class*="col-"]{
+            &:last-child{
+                & .it-contact-inner-item {
+                    border-right: 0;
+                }
+            }
+        }
+    }
+    & .it-contact-input-box input {
+        height: 70px;
+        line-height: 70px;
+        @media #{$lg,$md,$xs}{
+            height: 55px;
+            line-height: 55px;
+        }
+    }
+    & .it-contact-inner-form-box {
+        padding: 70px 80px;
+        @media #{$lg,$md}{
+            padding: 50px 40px;
+            margin-top: 0;
+        }
+        @media #{$xs}{
+            padding: 50px 20px;
+            margin-top: 0;
+        }
+        @media #{$sm}{
+            padding: 50px 40px;
+        }
+        & .it-contact-select .nice-select{
+            @media #{$lg,$md,$xs}{
+                height: 55px;
+                line-height: 55px;
+            }
+        }
+    }
+    
 }
 .it-map-wrap {
     line-height: 0;
     & iframe {
         width: 100%;
         height: 600px;
+        @media #{$xl,$lg}{
+            height: 450px;
+        }
+        @media #{$md}{
+            height: 400px;
+        }
+        @media #{$xs}{
+            height: 250px;
+        }
     }
 }
 .it-signup{
@@ -155,11 +317,15 @@
         background-color: #F1F5FF;
         position: relative;
         z-index: 1;
+        overflow: hidden;
         @media #{$lg}{
             padding: 40px 35px;
         }
         @media #{$xs}{
             padding: 40px 15px;
+        }
+        @media #{$sm}{
+            padding: 50px;
         }
         &::after {
             position: absolute;
@@ -171,6 +337,9 @@
             z-index: -2;
             border-radius: 30px 0 0 30px;
             background-color: var(--it-theme-1);
+            @media #{$md,$xs}{
+                display: none;
+            }
         }
 
     }
@@ -179,25 +348,41 @@
         top: 0;
         left: 0;
         z-index: -1;
+        @media #{$lg,$md,$xs}{
+            display: none;
+        }
     }
     &-wrap {
         margin-left: 60px;
         @media #{$xl}{
             margin-left: 30px;
         }
-        @media #{$lg,$md,$xs}{
+        @media #{$lg}{
+            margin-left: 25px;
+        }
+        @media #{$md,$xs}{
             margin-left: 0px;
+            font-size: 15px;
         }
         & > span {
             font-weight: 500;
             font-size: 17px;
             display: block;
             padding-bottom: 50px;
+            @media #{$md,$xs}{
+                font-size: 15px;
+                padding-bottom: 30px;
+            }
         }
         & .it-contact-agree .form-check-input.form-check-input[type="checkbox"] {
             margin-top: -2px;
             height: 20px;
             width: 20px;
+            @media #{$xs}{
+                height: 15px;
+                width: 15px;
+                border-radius: 2px;
+            }
         }
         & .it-btn::after {
             height: 700px;
@@ -205,12 +390,21 @@
             transition: 0.5s;
         }
     }
-    &-title{
+    &-title {
         font-weight: 600;
         font-size: 35px;
         line-height: 1;
         text-transform: capitalize;
         padding-bottom: 18px;
+        @media #{$lg,$md}{
+            font-size: 31px;
+        }
+        @media #{$xs}{
+            font-size: 25px;
+        }
+        @media #{$sm}{
+            font-size: 30px;
+        }
     }
     &-input{
         position: relative;
@@ -229,6 +423,13 @@
                 height: 55px;
                 line-height: 55px;
             }
+            @media #{$xs}{
+                height: 52px;
+                line-height: 52px;
+                padding-left: 44px;
+                font-size: 14px;
+            }
+            
             &:focus {
                 border: 1px solid var(--it-theme-1);
             }
@@ -238,6 +439,14 @@
             top: 50%;
             left: 28px;
             transform: translateY(-50%);
+            @media #{$xs}{
+                left: 19px;
+            }
+            & svg {
+                @media #{$xs}{
+                    width: 15px;
+                }
+            }
         }
     }
     &-text{
@@ -321,23 +530,31 @@
         border: 1px solid rgba(1, 16, 61, 0.2);
         border-radius: 10px;
         @media #{$xl}{
-            padding: 12px 12px;
+            padding: 12px 30px;
         }
         @media #{$lg}{
-            padding: 12px 15px;
+            padding: 12px 30px;
         }
         @media #{$xs}{
-            width: 100%;
+            padding: 12px 15px;
             margin-bottom: 10px;
+        }
+        @media #{$sm}{
+            padding: 12px 50px;
+            margin-bottom: 0px;
+        }
+        & img {
+            @media #{$xs}{
+                width: 20px;
+            }
         }
         & span {
             font-size: 20px;
             color: var(--it-common-black);
             display: inline-block;
             padding-left: 10px;
-
-            @media #{$lg,$md,$xs}{
-                font-size: 12px;
+            @media #{$xs}{
+                font-size: 14px;
             }
         }
     }
@@ -353,6 +570,10 @@
             background-color: #F1F5FF;
             z-index: 1;
             display: inline-block;
+            @media #{$xs}{
+                font-size: 13px;
+                padding: 0 18px;
+            }
         }
         &::after{
             position: absolute;
@@ -363,6 +584,16 @@
             width: 100%;
             height: 1px;
             background-color: rgba($color: #01103D, $alpha: .2);
+        }
+    }
+    &-left {
+        & img  {
+            @media #{$xl}{
+                width: 300px;
+            }
+            @media #{$lg}{
+                width: 250px;
+            }
         }
     }
 }

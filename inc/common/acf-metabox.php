@@ -59,6 +59,13 @@ if (function_exists('acf_add_local_field_group')):
                 'choices' => array(
                     'header-style-11' => 'Header Style 1',
                     'header-style-22' => 'Header Style 2',
+                    'header-style-33' => 'Header Style 3',
+                    'header-style-44' => 'Header Style 4',
+                    'header-style-55' => 'Header Style 5',
+                    'header-style-66' => 'Header Style 6',
+                    'header-style-77' => 'Header Style 7',
+                    'header-style-88' => 'Header Style 8',
+                    'header-style-99' => 'Header Style 9',
                 ),
                 'default_value' => 'header-style-11',
                 'wrapper' => array(
@@ -77,6 +84,13 @@ if (function_exists('acf_add_local_field_group')):
                 'choices' => array(
                     'footer-style-1' => 'Footer Style 1',
                     'footer-style-2' => 'Footer Style 2',
+                    'footer-style-3' => 'Footer Style 3',
+                    'footer-style-4' => 'Footer Style 4',
+                    'footer-style-5' => 'Footer Style 5',
+                    'footer-style-6' => 'Footer Style 6',
+                    'footer-style-7' => 'Footer Style 7',
+                    'footer-style-8' => 'Footer Style 8',
+                    'footer-style-9' => 'Footer Style 9',
                 ),
                 'default_value' => 'footer-style-1',
                 'wrapper' => array(
@@ -219,6 +233,21 @@ if (function_exists('acf_add_local_field_group')):
                 'return_format' => 'value',
                 'wrapper' => array(
                     'width' => '25', // Set width to 50%
+                    'class' => '',
+                    'id' => '',
+                ),
+            ),
+
+            array(
+                'key' => 'field_select_breadcrum_image',
+                'label' => 'Select Footer BG Image',
+                'name' => 'select_footer_bg_image',
+                'type' => 'image',
+                'return_format' => 'url', // Options: 'array', 'url', or 'id'
+                'preview_size' => 'thumbnail', // Size of the image preview in admin
+                'library' => 'all', // Can be 'all' or 'uploadedTo'
+                'wrapper' => array(
+                    'width' => '50', // Adjust the width as needed
                     'class' => '',
                     'id' => '',
                 ),

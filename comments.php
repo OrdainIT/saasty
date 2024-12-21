@@ -16,31 +16,32 @@ if (post_password_required()) {
 ?>
 
 <?php if (have_comments() || comments_open()) : ?>
-    <div id="comments" class="postbox-comment-wrap">
+    <div id="comments" class="postbox-comment mb-80">
 
         <?php if (get_comments_number() >= 1): ?>
             <div class="postbox-comment mb-45">
-                <div class="postbox-comment-title mb-30">
 
-                    <?php
-                    $comment_no = number_format_i18n(get_comments_number());
-                    $comment_text = (!empty($comment_no) and ($comment_no > 1)) ? esc_html__(' Comments', 'saasty') : esc_html__(' Comment ', 'saasty');
-                    $comment_no = (!empty($comment_no) and ($comment_no > 0)) ? '<h3>' . esc_html('0' . $comment_no .  $comment_text) . '</h3>' : ' ';
-                    print sprintf("%s", $comment_no);
-                    ?>
 
-                </div>
-                <div class="latest-comments mb-65">
-                    <ul>
-                        <?php
-                        wp_list_comments([
-                            'style'       => 'ul',
-                            'callback'    => 'saasty_comment',
-                            'avatar_size' => 90,
-                            'short_ping'  => true,
-                        ]);
-                        ?>
-                    </ul>
+                <?php
+                $comment_no = number_format_i18n(get_comments_number());
+                $comment_text = (!empty($comment_no) and ($comment_no > 1)) ? esc_html__(' Comments', 'saasty') : esc_html__(' Comment ', 'saasty');
+                $comment_no = (!empty($comment_no) and ($comment_no > 0)) ? '<h3 class="postbox-comment-title mb-35">' . esc_html('0' . $comment_no .  $comment_text) . '</h3>' : ' ';
+                print sprintf("%s", $comment_no);
+                ?>
+
+                <div class="postbox-comment-item">
+                    <div class="postbox-comment-content mb-25">
+                        <ul>
+                            <?php
+                            wp_list_comments([
+                                'style'       => 'ul',
+                                'callback'    => 'saasty_comment',
+                                'avatar_size' => 90,
+                                'short_ping'  => true,
+                            ]);
+                            ?>
+                        </ul>
+                    </div>
                 </div>
             </div>
         <?php endif; ?>
@@ -80,9 +81,9 @@ if (post_password_required()) {
         $aria_req    = ($req ? " aria-required='true'" : '');
 
         $fields = array(
-            'author' => '<div class="row"><div class="col-md-6"><div class="postbox-review-input"><input placeholder="' .  esc_attr__('Enter Name', 'saasty') . '" id="author" class="tp-form-control" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' /></div></div>',
-            'email'  => '<div class="col-md-6"><div class="postbox-review-input"><input placeholder="' .  esc_attr__('Enter Email', 'saasty') . '" id="email" name="email" class="tp-form-control" type="email" value="' . esc_attr($commenter['comment_author_email']) . '" size="30"' . $aria_req . ' /></div></div>',
-            'url'    => '<div class="col-md-12"><div class="postbox-review-input"><input placeholder="' .  esc_attr__('Enter Website', 'saasty') . '" id="url" name="url" class="tp-form-control" type="url" value="' . esc_attr($commenter['comment_author_url']) . '" size="30" /></div></div></div>'
+            'author' => '<div class="row"><div class="col-md-6 mb-20"><div class="postbox-review-input"><input placeholder="' .  esc_attr__('Enter Name', 'saasty') . '" id="author" class="tp-form-control" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' /></div></div>',
+            'email'  => '<div class="col-md-6 mb-20"><div class="postbox-review-input"><input placeholder="' .  esc_attr__('Enter Email', 'saasty') . '" id="email" name="email" class="tp-form-control" type="email" value="' . esc_attr($commenter['comment_author_email']) . '" size="30"' . $aria_req . ' /></div></div>',
+            'url'    => '<div class="col-md-12 mb-20"><div class="postbox-review-input"><input placeholder="' .  esc_attr__('Enter Website', 'saasty') . '" id="url" name="url" class="tp-form-control" type="url" value="' . esc_attr($commenter['comment_author_url']) . '" size="30" /></div></div></div>'
         );
 
         if (is_user_logged_in()) {
@@ -94,15 +95,15 @@ if (post_password_required()) {
             'fields'             => $fields,
             'comment_field'      => '
             <div class="row post-input">
-                <div class="col-md-12 ' . $cl . '">
+                <div class="col-md-12 mb-20 ' . $cl . '">
                     <div class="postbox-review-message"><textarea placeholder="' .  esc_attr__('Write Your Message*', 'saasty') . '" id="comment" name="comment" cols="45" rows="6" aria-required="true"></textarea>
                 </div></div>
                 <div class="clearfix"></div>
             </div>
         ',
             'submit_button' => '
-            <div class="postbox-review-button mt-30">
-                <button class="it-btn-primary" type="submit">
+            <div class="postbox-review-button">
+                <button class="it-btn" type="submit">
                     ' . esc_html__('Post Comment', 'saasty') . '
                 </button>
             </div>

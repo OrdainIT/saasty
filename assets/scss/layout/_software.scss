@@ -647,11 +647,20 @@
     &-thumb {
         & img {
             border-radius: 30px;
+            @media #{$md,$xs}{
+                width: 100%;
+                margin-bottom: 50px;
+            }
         }
     }
     &-style {
         & .dt-section-subtitle {
             color: #7771F7;
+        }
+        & .it-software-right-box {
+            @media #{$xl}{
+                margin-left: 0;
+            }
         }
     }
     &-style-2 {

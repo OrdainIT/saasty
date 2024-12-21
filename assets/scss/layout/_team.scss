@@ -9,6 +9,9 @@
         margin: 0 55px;
         border-radius: 50px;
         background-color: #F1F5FF;
+        @media #{$xl,$lg,$md,$xs}{
+            margin: 0 15px;
+        }
         & .dt-section-subtitle {
             font-weight: 700;
             font-size: 14px;
@@ -16,6 +19,11 @@
             letter-spacing: 0.1em;
             text-transform: uppercase;
             color: #746fff;
+        }
+    }
+    &-area {
+        @media #{$lg,$md,$xs}{
+            padding: 80px 0;
         }
     }
     &-thumb {
@@ -116,5 +124,224 @@
 .it-team-inner-style {
     & .it-team-item {
         background-color: #F1F5FF;
+    }
+    &.it-team-area {
+        @media #{$lg,$md,$xs}{
+            padding-bottom: 0;
+        }
+    }
+}
+.it-team-inner-style-2 {
+    &.it-team-area {
+        @media #{$lg,$md,$xs}{
+            padding: 0;
+        }
+    }
+}
+
+// details css here
+/* details area start */
+
+.it-team-details{
+    &-wrap{
+        padding: 50px;
+        border-radius: 30px;
+        background-color: #F1F5FF;
+        @media #{$xl,$lg,$xs}{
+            font-size: 14px;
+            padding: 50px 20px;
+        }
+        & .it-contact-inner-list ul li span {
+            font-size: 16px;
+        }
+    }
+    &-left{
+        &-thumb{
+            flex: 0 0 auto;
+            text-align: center;
+            & img {
+                height: 300px;
+                width: 300px;
+                border-radius: 50%;
+                margin-bottom: 30px;
+                @media #{$xl,$lg,$xs}{
+                    height: 200px;
+                    width: 200px;
+                }
+            }
+        }
+        &-social{
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba($color: #01103D, $alpha: .3);
+            & a{
+                height: 45px;
+                width: 45px;
+                border-radius: 50%;
+                line-height: 45px;
+                text-align: center;
+                display: inline-block;
+                background-color: var(--it-common-white);
+                margin: 0px 6px;
+                transition: .3s;
+                @media #{$lg}{
+                    height: 30px;
+                    width: 30px;
+                    line-height: 30px;
+                }
+                &:hover {
+                    color: var(--it-common-white);
+                    background-color: var(--it-theme-1);
+                }
+            }
+        }
+        &-info{
+            margin-bottom: 40px;
+            & ul{
+                & li{
+                    list-style-type: none;
+                    position: relative;
+                    padding-left: 30px;
+                    & a{
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 1;
+                        @media #{$xl,$lg,$md,$xs}{
+                            font-size: 14px;
+                        }
+                    }
+                    & i{
+                        color: var(--it-theme-1);
+                        position: absolute;
+                        top: 8px;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+    &-left {
+        @media #{$md,$xs}{
+            margin-bottom: 50px;
+        }
+    }
+    &-right{
+        background-color: var(--it-common-white);
+        padding: 50px;
+        margin-left: 20px;
+        @media #{$xs}{
+            padding: 60px 15px;
+            margin-left: 0;
+        }
+        & .it-progress-bar-wrap {
+            & h4 {
+                text-transform: uppercase;
+                @media #{$lg,$md,$xs}{
+                    font-size: 18px;
+                }
+            }
+        }
+        & .it-progress-bar-item {
+            & label {
+                @media #{$lg,$md,$xs}{
+                    font-size: 14px;
+                }
+            }
+        }
+        &-title-box{
+            margin-bottom: 40px;
+            & h4{
+                font-size: 30px;
+                font-weight: 700;
+                margin-bottom: 17px;
+                text-transform: uppercase;
+                @media #{$xl,$lg,$md}{
+                    font-size: 24px;
+                }
+                @media #{$xs}{
+                    font-size: 19px;
+                }
+            }
+            & span{
+                color:var(--it-theme-1);
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 1;
+                text-transform: uppercase;
+                margin-bottom: 30px;
+                display: inline-block;
+            }
+            & p {
+                line-height: 1.65;
+                font-size: 20px;
+                font-weight: 500;
+                @media #{$xl,$lg,$md,$xs}{
+                    font-size: 14px;
+                }
+            }
+        }
+        &-content {
+            & p {
+                @media #{$lg,$md,$xs}{
+                    font-size: 14px;
+                }
+            }
+            & h4 {
+                @media #{$xs}{
+                    font-size: 20px;
+                }
+            }
+        }
+        & .it-progress-bar-wrap{
+            & .it-progress-bar .progress-bar span {
+                top: -22px;
+            }
+        }
+    }
+}
+
+.it-progress-bar{
+    &-item{
+        padding: 5px 0px;
+        overflow: hidden;
+        padding-top: 0;
+        @media #{$lg}{
+            padding-top: 20px;
+        }
+        & label{
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1;
+            margin-bottom: 16px;
+            display: inline-block;
+            color: var(--it-theme-1);
+            @media #{$xs}{
+                font-size: 14px;
+            }
+        }
+    }
+    & .progress{
+        overflow: visible;
+        background: #F3E8DF;
+        height: 8px;
+        border-radius: 1000px;
+    }
+    & .progress-bar{
+        background-color: var(--it-theme-1);
+        position: relative;
+        overflow: visible;
+        height: 100%;
+        top: 0;
+        border-radius: 1000px;
+    }
+    & .progress-bar span {
+        position: absolute;
+        right: 0;
+        top: -30px;
+        transform: translateY(-50%);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+        color: #4B4B4B;
     }
 }

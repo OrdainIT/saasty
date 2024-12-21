@@ -8,6 +8,7 @@
 		$('#preloader').fadeOut(500);
 	});
 
+
 	///////////////////////////////////////////////////
 	// 07. Sticky Header Js
 	windowOn.on('scroll', function () {
@@ -18,6 +19,9 @@
 			$("#header-sticky").addClass("header-sticky");
 		}
 	});
+
+	// 08. Nice Select Js
+	$('select').niceSelect();
 
 	////////////////////////////////////////////////////
 	// 11. Data CSS Js

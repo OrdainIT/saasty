@@ -1,3 +1,44 @@
 body.elementor-editor-active header {
   display: none;
 }
+
+.postbox-more-thumb img {
+  object-fit: cover;
+}
+
+.postbox-list ul {
+  padding-left: 0 !important;
+}
+
+.postbox-list ul li i {
+  top: auto !important;
+}
+
+.postbox-thumb {
+  padding: 0 !important;
+}
+
+.postbox-thumb img {
+  border-radius: 10px;
+}
+
+.postbox-comment-user .comment-reply-link {
+  position: absolute;
+  top: 25%;
+  right: 40px;
+  padding: 9px 31px;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: inline-block;
+  background-color: #01103d;
+  color: var(--it-common-white);
+}
+.postbox-comment-user .comment-reply-link:hover {
+  color: var(--it-common-white);
+  background-color: var(--it-theme-1);
+}
+
+.postbox-comment-content ul.children {
+  padding-left: 75px;
+}

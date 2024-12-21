@@ -1,22 +1,18 @@
 
 
-.tp-contact-select .nice-select {
+.it-contact-select .nice-select {
 	-webkit-tap-highlight-color: transparent;
-	background: rgba(255, 255, 255, 0.14);
-	border: 2px solid rgba(255, 255, 255, 0.14);
-	box-shadow: 0px 1px 1px rgba(12, 40, 133, 0.2);
-	border-radius: 30px;
+	border-radius: 5px;
 	box-sizing: border-box;
 	clear: both;
 	cursor: pointer;
 	display: block;
 	float: left;
 	font-family: inherit;
-	font-size: 15px;
-	font-weight: 500;
 	text-transform: capitalize;
-	height: 60px;
-	line-height: 55px;
+	height: 70px;
+	line-height: 70px;
+	border-radius: 5px;
 	outline: none;
 	padding-left: 30px;
 	padding-right: 30px;
@@ -30,23 +26,22 @@
 	user-select: none;
 	white-space: nowrap;
 	width: 100%;
+	background-color: var(--it-common-white);
+	border: 1px solid rgba(1, 16, 61, 0.1);
 }
 
-.tp-contact-select .nice-select span{
-	font-weight: 500;
-	font-size: 15px;
+.it-contact-select .nice-select span{
+	font-weight: 400;
+	font-size: 16px;
 	line-height: 14px;
-	color: rgba(255, 255, 255, 0.54);
+	color: var(--it-text-body);
 }
 
-.nice-select:hover {
-	border-color: #124BD1;
-}
 
 .nice-select:active,
 .nice-select.open,
 .nice-select:focus {
-	border-color: #fff;
+	border-color: var(--it-theme-1);
 }
 
 .nice-select:after {
@@ -155,7 +150,7 @@
 	background-color: #fff;
 	border-radius: 5px;
 	box-shadow: 0px 1px 1px rgba(12, 40, 133, 0.2);
-	border: 1.5px solid #124BD1;
+	border: 1px solid var(--it-theme-1);
 }
 
 

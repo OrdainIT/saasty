@@ -451,11 +451,211 @@
     }
 }
 .it-service-inner-style {
+    &.dt-service-area {
+        @media #{$lg,$md,$xs}{
+            padding: 0;
+        }
+    }
     & .dt-service-icon {
         & img {
             height: auto;
             @media #{$md,$xs}{
                 height: auto;
+            }
+        }
+    }
+}
+
+
+// details css here
+.it-sv {
+    &-details {
+        &-wrapper {
+            margin-left: 42px;
+            @media #{$xl,$lg,$md,$xs}{
+                margin-left: 0;
+            }
+            & .it-section-title {
+                @media #{$xl,$lg,$md}{
+                    font-size: 32px;
+                    & br {
+                        display: none;
+                    }
+                }
+                @media #{$xs}{
+                    font-size: 28px;
+                    & br {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &-text {
+            & p {
+                font-weight: 500;
+                font-size: 20px;
+                color: #5F6168;
+                @media #{$xl,$lg,$md,$xs}{
+                    font-size: 16px;
+                }
+            }
+        }
+        &-list {
+            &-box {
+                & ul {
+                    & li {
+                        width: 50%;
+                        float: left;
+                        list-style-type: none;
+                        position: relative;
+                        padding-left: 40px;
+                        margin-bottom: 30px;
+                        @media #{$xl,$lg,$md,$xs}{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            &-icon {
+                position: absolute;
+                top: -3px;
+                left: 0;
+                & svg {
+                    @media #{$xl,$lg,$md,$xs}{
+                        width: 23px;
+                    }
+                }
+            }
+            &-content {
+                & h5 {
+                    font-weight: 700;
+                    font-size: 22px;
+                    color: #01103d;
+                    margin-bottom: 13px;
+                    @media #{$xl,$lg,$md,$xs}{
+                        font-size: 18px;
+                    }
+                }
+                & p {
+                    font-weight: 400;
+                    font-size: 20px;
+                    margin-right: 50px;
+                    @media #{$xl,$lg,$md,$xs}{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        &-banner {
+            & img {
+                border-radius: 10px;
+            }
+        }
+    }
+    &-sidebar {
+        &-wrapper {
+            @media #{$md,$xs}{
+                margin-bottom: 70px;
+            }
+        }
+        &-widget {
+            &-box {
+                padding: 40px 20px;
+                border-radius: 10px;
+                background-color: #F1F5FF;
+                & ul {
+                    & li {
+                        list-style-type: none;
+                        font-weight: 400;
+                        font-size: 16px;
+                        color: #01103d;
+                        &:not(:last-child){
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+            &-list {
+                padding: 13.5px 15px;
+                border-radius: 5px;
+                background-color: #fff;   
+                transition: .3s;
+                display: flex;
+                justify-content: space-between;  
+                border: 1px solid rgba(1, 16, 61, 0.1);
+                &.active {
+                    color: var(--it-common-white);
+                   background-color: var(--it-theme-1);         
+                }
+                &:hover {
+                    color: var(--it-common-white);
+                   background-color: var(--it-theme-1);         
+                }
+            }
+            &-title {
+                font-weight: 700;
+                font-size: 22px;
+                color: #01103d;
+                margin-bottom: 27px;
+            }
+        }
+        &-analysis {
+            &-box {
+                width: 100%;
+                padding: 40px 20px;
+                padding-right: 60px;
+                padding-bottom: 245px;
+                border-radius: 10px;
+                background: linear-gradient(315deg, #295dfb 0%, #661cdf 100%);
+                @media #{$md}{
+                    padding-bottom: 100px;
+                }
+                & .it-sv-sidebar-widget-title {
+                    margin-bottom: 10px;
+                }
+                & p {
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: #fff;
+                    line-height: 1.8;
+                }
+                & .it-btn-sm {
+                    font-weight: 600;
+                    font-size: 14px;
+                    text-align: center;
+                    color: #01103d;
+                    padding: 13px 20px;
+                    border-radius: 10px;
+                    background-color: #FFCE5A;
+                    &::after{
+                        background-color: var(--it-common-white);
+                    }
+                }
+            }
+            &-thumb {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+        &-cv {
+            display: flex; 
+            border-radius: 5px;
+            padding: 13px 20px;
+            transition: .3s;
+            justify-content: space-between;
+            background-color: var(--it-common-black);
+            border: 1px solid rgba(1, 16, 61, 0.1);
+            & span {
+                font-weight: 400;
+                font-size: 16px;
+                color: var(--it-common-white);
+            }
+            &.active {
+                background-color: var(--it-theme-1);
+            }
+            &:hover {
+                background-color: var(--it-theme-1);
             }
         }
     }
