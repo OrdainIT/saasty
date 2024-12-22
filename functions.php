@@ -247,7 +247,10 @@ require saasty_THEME_INC . 'template-helper.php';
 /**
  * initialize saasty customizer class.
  */
-include_once saasty_THEME_INC . 'theme-customizer.php';
+if (class_exists('kirki')) {
+    include_once saasty_THEME_INC . 'theme-customizer.php';
+}
+
 
 /**
  * Load Jetpack compatibility file.
