@@ -35,7 +35,7 @@ function saasty_register_required_plugins()
         [
             'name'         => esc_html__('Ordainit Toolkit', 'saasty'),
             'slug'         => 'ordainit-toolkit',
-            'source'       => esc_url('https://github.com/OrdainIT/plugins/raw/main/travello/ordainit-toolkit.zip'),
+            'source'       => esc_url('https://github.com/OrdainIT/plugins/raw/main/saasty/ordainit-toolkit.zip'),
             'required'     => true,
         ],
         [
