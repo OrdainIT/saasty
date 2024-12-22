@@ -9,9 +9,6 @@
  */
 
 $categories = get_the_terms($post->ID, 'category');
-$saasty_blog_date = get_theme_mod('saasty_blog_date_switch', true);
-$saasty_blog_comments = get_theme_mod('saasty_blog_comment_switch', true);
-$saasty_blog_author = get_theme_mod('saasty_blog_author_switch', true);
 
 ?>
 

@@ -834,30 +834,8 @@ add_action(
                     'priority'    => 10,
                 ]
             );
-            new \Kirki\Field\Checkbox_Switch(
-                [
-                    'settings'    => 'saasty_blog_author_switch',
-                    'label'       => esc_html__('Blog Author Meta On/Off', 'saasty'),
-                    'section'     => 'saasty_blog_settings',
-                    'default'     => 'on',
-                    'choices'     => [
-                        'on'  => esc_html__('Enable', 'saasty'),
-                        'off' => esc_html__('Disable', 'saasty'),
-                    ],
-                ]
-            );
-            new \Kirki\Field\Checkbox_Switch(
-                [
-                    'settings'    => 'saasty_blog_date_switch',
-                    'label'       => esc_html__('Blog Date Meta On/Off', 'saasty'),
-                    'section'     => 'saasty_blog_settings',
-                    'default'     => 'on',
-                    'choices'     => [
-                        'on'  => esc_html__('Enable', 'saasty'),
-                        'off' => esc_html__('Disable', 'saasty'),
-                    ],
-                ]
-            );
+
+
 
             new \Kirki\Field\Text(
                 [
@@ -869,21 +847,40 @@ add_action(
                 ]
             );
 
-
-            new \Kirki\Field\Radio_Image(
+            new \Kirki\Field\Select(
                 [
                     'settings'    => 'saasty_bolg_style',
                     'label'       => esc_html__('Select Blog Style', 'saasty'),
                     'section'     => 'saasty_blog_settings',
-                    'default'     => 'blog-style-1',
-                    'priority'    => 10,
-                    'multiple'    => 1,
+                    'default'     => 'right-sidebar',
                     'choices'     => [
-                        'blog-style-1'   => get_template_directory_uri() . '/inc/img/blog/blog_style_1.png',
-                        'blog-style-2' => get_template_directory_uri() . '/inc/img/blog/blog_style_2.png',
+                        'left-sidebar' => esc_html__('Left Sidebar', 'saasty'),
+                        'right-sidebar' => esc_html__('Right Sidebar', 'saasty'),
+                        'no-sidebar' => esc_html__('Full Width', 'saasty'),
                     ],
                 ]
             );
+
+            new \Kirki\Field\Select(
+                [
+                    'settings'    => 'saasty_bolg_colum_style',
+                    'label'       => esc_html__('Blog Column Style', 'saasty'),
+                    'section'     => 'saasty_blog_settings',
+                    'default'     => '3',
+                    'choices'     => [
+                        '3' => esc_html__('3 Column', 'saasty'),
+                        '2' => esc_html__('2 Column', 'saasty'),
+                    ],
+                    'required'    => [
+                        [
+                            'setting'  => 'saasty_bolg_style',
+                            'operator' => '==',
+                            'value'    => 'no-sidebar',
+                        ],
+                    ],
+                ]
+            );
+
 
 
             //Events Settings

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The main template file
  *
@@ -11,13 +12,15 @@
  *
  * @package saasty
  */
-$saasty_bolg_style = get_theme_mod('saasty_bolg_style', 'blog-style-1');
+$saasty_bolg_style = get_theme_mod('saasty_bolg_style', 'right-sidebar');
 get_header();
-if ( $saasty_bolg_style == 'blog-style-2' ) {
-            get_template_part( 'template-parts/blog/blog_style_2' );
-  }else{
-		get_template_part( 'template-parts/blog/blog_style_1' );
-	}
+if ($saasty_bolg_style == 'left-sidebar') {
+    get_template_part('template-parts/blog/blog_style_2');
+} elseif ($saasty_bolg_style == 'no-sidebar') {
+    get_template_part('template-parts/blog/blog_style_3');
+} else {
+    get_template_part('template-parts/blog/blog_style_1');
+}
 
 
 get_footer();

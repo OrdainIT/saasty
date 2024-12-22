@@ -7,9 +7,19 @@ $blog_column_9 = is_active_sidebar('blog-sidebar') ? 9 : 12;
 
 ?>
 
-<div class='postbox-area pt-120 pb-105'>
+<div class='postbox-area postbox-left-style pt-120 pb-105'>
     <div class="container">
         <div class="row">
+
+            <?php if (is_active_sidebar('blog-sidebar')): ?>
+                <div class="col-xl-3 col-lg-4">
+                    <div class="sidebar-right">
+                        <div class="it-common-sidebar it-blog-sidebar common_test_sidebar">
+                            <?php get_sidebar(); ?>
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?>
             <div class="col-xl-<?php echo esc_attr($blog_column_9, 'saasty'); ?> col-lg-<?php echo esc_attr($blog_column_8, 'saasty'); ?>">
                 <div class="postbox-details-wrapper">
                     <?php
@@ -53,15 +63,6 @@ $blog_column_9 = is_active_sidebar('blog-sidebar') ? 9 : 12;
                     ?>
                 </div>
             </div>
-            <?php if (is_active_sidebar('blog-sidebar')): ?>
-                <div class="col-xl-3 col-lg-4">
-                    <div class="sidebar-right">
-                        <div class="it-common-sidebar it-blog-sidebar common_test_sidebar">
-                            <?php get_sidebar(); ?>
-                        </div>
-                    </div>
-                </div>
-            <?php endif; ?>
         </div>
     </div>
 </div>

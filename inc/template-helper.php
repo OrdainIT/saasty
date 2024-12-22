@@ -168,7 +168,7 @@ function saasty_header_logo()
 { ?>
     <?php
     $saasty_logo_on = function_exists('get_field') ? get_field('header_logo_page') : NULL;
-    $saasty_logo = get_template_directory_uri() . '/assets/img/logo/logo.png';
+    $saasty_logo = get_template_directory_uri() . '/assets/img/logo/logo-1.png';
 
     $saasty_site_logo = get_theme_mod('header_logo', $saasty_logo);
     ?>

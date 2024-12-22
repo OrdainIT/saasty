@@ -42,3 +42,11 @@ body.elementor-editor-active header {
 .postbox-comment-content ul.children {
   padding-left: 75px;
 }
+
+header .it-header-area {
+  padding: 27px 0;
+}
+
+body.active_menu_class header .it-header-area {
+  padding: 0;
+}
