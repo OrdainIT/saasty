@@ -594,20 +594,27 @@ add_action(
                 ]
             );
 
-            new \Kirki\Field\Radio_Image(
+            new \Kirki\Field\Select(
                 [
                     'settings'    => 'saasty_header_style',
                     'label'       => esc_html__('Select Header Style', 'saasty'),
                     'section'     => 'saasty_header_logo',
                     'default'     => 'header-style-11',
-                    'priority'    => 10,
-                    'multiple'    => 1,
+                    'placeholder' => esc_html__('Choose an option', 'saasty'),
                     'choices'     => [
-                        'header-style-11'   => get_template_directory_uri() . '/inc/img/header/header-1.png',
-                        'header-style-22' => get_template_directory_uri() . '/inc/img/header/header-2.png',
+                        'header-style-11' => esc_html__('Header Style 1', 'saasty'),
+                        'header-style-22' => esc_html__('Header Style 2', 'saasty'),
+                        'header-style-33' => esc_html__('Header Style 3', 'saasty'),
+                        'header-style-44' => esc_html__('Header Style 4', 'saasty'),
+                        'header-style-55' => esc_html__('Header Style 5', 'saasty'),
+                        'header-style-66' => esc_html__('Header Style 6', 'saasty'),
+                        'header-style-77' => esc_html__('Header Style 7', 'saasty'),
+                        'header-style-88' => esc_html__('Header Style 8', 'saasty'),
+                        'header-style-99' => esc_html__('Header Style 9', 'saasty'),
                     ],
                 ]
             );
+
 
             //Header Logo
             new \Kirki\Field\Image(
@@ -801,16 +808,26 @@ add_action(
                     'label'       => esc_html__('Upload 404 Image', 'saasty'),
                     'description' => esc_html__('', 'saasty'),
                     'section'     => 'saasty_404_settings',
-                    'default'     => get_template_directory_uri() . '/assets/img/inner-page/error/thumb-1.png',
+                    'default'     => get_template_directory_uri() . '/assets/img/error/error.png',
                 ]
             );
 
-            new \Kirki\Field\Textarea(
+            new \Kirki\Field\Text(
+                [
+                    'settings' => 'saasty_error_title',
+                    'label'    => esc_html__('Title ', 'saasty'),
+                    'section'  => 'saasty_404_settings',
+                    'default'  => saasty_kses('Oops! That page can’t be found.', 'saasty'),
+                    'priority' => 10,
+                ]
+            );
+
+            new \Kirki\Field\Text(
                 [
                     'settings' => 'saasty_error_desc',
-                    'label'    => esc_html__('Title Two', 'saasty'),
+                    'label'    => esc_html__('Description ', 'saasty'),
                     'section'  => 'saasty_404_settings',
-                    'default'  => saasty_kses('It looks like nothing was found at this location. Maybe try one of the <br>  links below or a search?.', 'saasty'),
+                    'default'  => saasty_kses('Oops! The page you are looking for does not exist. It might have <br> been moved or deleted. Please check and try again.', 'saasty'),
                     'priority' => 10,
                 ]
             );
@@ -955,8 +972,6 @@ add_action(
                         'footer-style-5' => esc_html__('Footer Style 5', 'saasty'),
                         'footer-style-6' => esc_html__('Footer Style 6', 'saasty'),
                         'footer-style-7' => esc_html__('Footer Style 7', 'saasty'),
-                        'footer-style-8' => esc_html__('Footer Style 8', 'saasty'),
-                        'footer-style-9' => esc_html__('Footer Style 9', 'saasty'),
                     ],
                 ]
             );

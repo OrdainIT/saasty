@@ -105,13 +105,13 @@ function saasty_breadcrumb_func()
                         <div class="col-lg-12">
                             <div class="it-breadcrumb-content z-index-3">
                                 <div class="it-breadcrumb-title-box">
-                                    <h3 class="it-breadcrumb-title"><?php echo esc_html($title); ?></h3>
+                                    <h3 class="it-breadcrumb-title"><?php echo saasty_kses($title); ?></h3>
                                 </div>
                                 <div class="it-breadcrumb-list-wrap">
                                     <div class="it-breadcrumb-list">
                                         <span><a href="<?php echo esc_url(home_url()); ?>"><?php echo esc_html__('Home', 'saasty'); ?></a></span>
                                         <span class="dvdr"><?php echo esc_html__('-', 'saasty'); ?></span>
-                                        <i><?php echo esc_html($title); ?></i>
+                                        <i><?php echo saasty_kses($title); ?></i>
                                     </div>
                                 </div>
                             </div>

@@ -10,24 +10,32 @@
 
 get_header();
 
-$_image_404_setup = get_theme_mod('_image_404_setup', get_template_directory_uri() . '/assets/img/inner-page/error/thumb-1.png');
+$_image_404_setup = get_theme_mod('_image_404_setup', get_template_directory_uri() . '/assets/img/error/error.png');
 $saasty_error_link_text = get_theme_mod('saasty_error_link_text', __('Back to Home', 'saasty'));
-$saasty_error_desc = get_theme_mod('saasty_error_desc', saasty_kses('<i>Lost in the fields? </i> Let us <br>  help you find your way back.', 'saasty'));
+$saasty_error_desc = get_theme_mod('saasty_error_desc', saasty_kses('Oops! The page you are looking for does not exist. It might have <br> been moved or deleted. Please check and try again.
+
+', 'saasty'));
+$saasty_error_title = get_theme_mod('saasty_error_title', saasty_kses('Oops! That page can’t be found.', 'saasty'));
 ?>
 
 <div class="it-error-area pt-120 pb-120">
    <div class="container">
+      <div class="row justify-content-center">
+         <div class="col-xxl-12 col-xl-7 col-lg-7 col-md-9">
+            <div class="it-error-thumb text-center mb-80">
+               <img src="<?php echo esc_url($_image_404_setup); ?>" alt="">
+            </div>
+         </div>
+      </div>
       <div class="row">
-         <div class="col-xl-12">
-            <div class="it-error-wrap">
-               <div class="it-error-thumb text-center mb-50">
-                  <img src="<?php echo esc_url($_image_404_setup); ?>" alt="">
-               </div>
-               <div class="it-error-content d-md-flex align-items-center justify-content-between">
-                  <h4 class="it-error-title">
-                     <?php echo saasty_kses($saasty_error_desc); ?>
-                  </h4>
-                  <a class="it-btn-primary" href="<?php echo esc_url(home_url()); ?>"><?php echo esc_html($saasty_error_link_text); ?></a>
+         <div class="col-12">
+            <div class="it-error-content text-center">
+               <h5 class="it-section-title mb-25"><?php echo saasty_kses($saasty_error_title, 'saasty'); ?></h5>
+               <p class="mb-35"><?php echo saasty_kses($saasty_error_desc, 'saasty'); ?></p>
+               <div class="it-fade-anim" data-fade-from="top" data-ease="bounce" data-delay=".5">
+                  <a class="it-btn" href="<?php echo esc_url(home_url()); ?>">
+                     <?php echo esc_html($saasty_error_link_text); ?>
+                  </a>
                </div>
             </div>
          </div>

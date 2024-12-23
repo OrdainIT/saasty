@@ -271,8 +271,7 @@ require_once saasty_THEME_INC . '/common/theme-breadcrumb.php';
 require_once saasty_THEME_INC . '/common/theme-scripts.php';
 require_once saasty_THEME_INC . '/common/theme-widgets.php';
 require_once saasty_THEME_INC . '/common/acf-metabox.php';
-require_once saasty_THEME_INC . '/common/csf-post-meta/event-meta.php';
-require_once saasty_THEME_INC . '/common/csf-post-meta/product-meta.php';
+require_once saasty_THEME_INC . '/common/csf-post-meta/service-meta.php';
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */

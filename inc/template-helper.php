@@ -482,6 +482,16 @@ function saasty_check_footer()
         /** default footer style **/
         if ($edunity_default_footer_styles == 'footer-style-2') {
             get_template_part('template-parts/footer/footer-2');
+        } elseif ($edunity_default_footer_styles == 'footer-style-3') {
+            get_template_part('template-parts/footer/footer-3');
+        } elseif ($edunity_default_footer_styles == 'footer-style-4') {
+            get_template_part('template-parts/footer/footer-4');
+        } elseif ($edunity_default_footer_styles == 'footer-style-5') {
+            get_template_part('template-parts/footer/footer-5');
+        } elseif ($edunity_default_footer_styles == 'footer-style-6') {
+            get_template_part('template-parts/footer/footer-6');
+        } elseif ($edunity_default_footer_styles == 'footer-style-7') {
+            get_template_part('template-parts/footer/footer-7');
         } else {
             get_template_part('template-parts/footer/footer-1');
         }
