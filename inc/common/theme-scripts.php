@@ -52,13 +52,6 @@ function saasty_scripts()
 
 
 
-    wp_enqueue_script('cart-ajax', get_template_directory_uri() . '/inc/js/cart-ajax.js', array('jquery'), null, true);
-
-    // Localize script to pass the AJAX URL
-    wp_localize_script('cart-ajax', 'cart_ajax_obj', array(
-        'ajaxurl' => admin_url('admin-ajax.php'),
-    ));
-
 
 
 

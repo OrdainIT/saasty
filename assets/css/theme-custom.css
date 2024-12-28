@@ -1,3 +1,6 @@
+.pb-80 {
+  padding-bottom: 80px;
+}
 body.elementor-editor-active header {
   display: none;
 }
@@ -49,4 +52,9 @@ header .it-header-area {
 
 body.active_menu_class header .it-header-area {
   padding: 0;
+}
+
+.it-header-menu > nav > ul > li.last_menu_item > .submenu {
+    left: auto;
+    right: 0;
 }

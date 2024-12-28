@@ -27,7 +27,7 @@ add_action(
                 'saasty_customizer',
                 [
                     'priority'    => 10,
-                    'title'       => esc_html__('Travello Customizer', 'saasty'),
+                    'title'       => esc_html__('Saasty Customizer', 'saasty'),
                 ]
             );
 
@@ -333,145 +333,12 @@ add_action(
 
 
 
+      
 
+           
 
+        
 
-
-
-            //=========== Header Top Info Settings ================ //
-            new \Kirki\Section(
-                'header_top_setting',
-                [
-                    'title'       => esc_html__('Header Top Info Setting', 'saasty'),
-                    'description' => esc_html__('', 'saasty'),
-                    'panel'       => 'saasty_customizer',
-                    'priority'    => 10,
-                ]
-            );
-
-            // Header Top Switch
-
-            new \Kirki\Field\Checkbox_Switch(
-                [
-                    'settings'    => 'header_top_switcher',
-                    'label'       => esc_html__('Topbar Switcher', 'saasty'),
-                    'description' => esc_html__('', 'saasty'),
-                    'section'     => 'header_top_setting',
-                    'default'     => 'off',
-                    'choices'     => [
-                        'on'  => esc_html__('Enable', 'saasty'),
-                        'off' => esc_html__('Disable', 'saasty'),
-                    ],
-                ]
-            );
-            new \Kirki\Field\Text(
-                [
-                    'settings' => 'header_top_phone_number',
-                    'label'    => esc_html__('Phone Number', 'saasty'),
-                    'section'  => 'header_top_setting',
-                    'default'  => esc_html__('(00)8757845682', 'saasty'),
-                    'priority' => 10,
-                ]
-            );
-            new \Kirki\Field\Text(
-                [
-                    'settings' => 'header_top_email_id',
-                    'label'    => esc_html__('Email Addres', 'saasty'),
-                    'section'  => 'header_top_setting',
-                    'default'  => esc_html__('info@saasty.com', 'saasty'),
-                    'priority' => 10,
-                ]
-            );
-
-
-            new \Kirki\Field\Text(
-                [
-                    'settings' => 'header_top_Address',
-                    'label'    => esc_html__('Address', 'saasty'),
-                    'section'  => 'header_top_setting',
-                    'default'  => esc_html__('Moon ave, New York, 2020 NY US', 'saasty'),
-                    'priority' => 10,
-                ]
-            );
-
-            new \Kirki\Field\Text(
-                [
-                    'settings' => 'header_top_Address_url',
-                    'label'    => esc_html__('Address URL', 'saasty'),
-                    'section'  => 'header_top_setting',
-                    'default'  => esc_html__('https://goo.gl/maps/qzqY2PAcQwUz1BYN9', 'saasty'),
-                    'priority' => 10,
-                ]
-            );
-
-
-
-
-
-
-
-            //=========== Header Socials ================ //
-
-            new \Kirki\Section(
-                'saasty_header_socials',
-                [
-                    'title'       => esc_html__('Header Top Socials Settings', 'saasty'),
-                    'description' => esc_html__('', 'saasty'),
-                    'panel'       => 'saasty_customizer',
-                    'priority'    => 10,
-                ]
-            );
-
-            new \Kirki\Field\Checkbox_Switch(
-                [
-                    'settings'    => 'header_social_switcher',
-                    'label'       => esc_html__('Header Social Swithcer', 'saasty'),
-                    'description' => esc_html__('', 'saasty'),
-                    'section'     => 'saasty_header_socials',
-                    'default'     => 'off',
-                    'choices'     => [
-                        'on'  => esc_html__('Enable', 'saasty'),
-                        'off' => esc_html__('Disable', 'saasty'),
-                    ],
-                ]
-            );
-
-            new \Kirki\Field\Text(
-                [
-                    'settings' => 'header_social_facebook_url',
-                    'label'    => esc_html__('Facebook URL', 'saasty'),
-                    'section'  => 'saasty_header_socials',
-                    'default'  => esc_html__('#', 'saasty'),
-                    'priority' => 10,
-                ]
-            );
-            new \Kirki\Field\Text(
-                [
-                    'settings' => 'header_social_instagram_url',
-                    'label'    => esc_html__('Instagram URL', 'saasty'),
-                    'section'  => 'saasty_header_socials',
-                    'default'  => esc_html__('#', 'saasty'),
-                    'priority' => 10,
-                ]
-            );
-            new \Kirki\Field\Text(
-                [
-                    'settings' => 'header_social_twitter_url',
-                    'label'    => esc_html__('Twitter URL', 'saasty'),
-                    'section'  => 'saasty_header_socials',
-                    'default'  => esc_html__('#', 'saasty'),
-                    'priority' => 10,
-                ]
-            );
-            new \Kirki\Field\Text(
-                [
-                    'settings' => 'header_social_linkedin_url',
-                    'label'    => esc_html__('LinkedIn URL', 'saasty'),
-                    'section'  => 'saasty_header_socials',
-                    'default'  => esc_html__('#', 'saasty'),
-                    'priority' => 10,
-                ]
-            );
 
             //=========== Header Right ================ //
 
@@ -897,51 +764,6 @@ add_action(
                     ],
                 ]
             );
-
-
-
-            //Events Settings
-            new \Kirki\Section(
-                'saasty_event_settings',
-                [
-                    'title'       => esc_html__('Event Settings', 'saasty'),
-                    'description' => esc_html__('', 'saasty'),
-                    'panel'       => 'saasty_customizer',
-                    'priority'    => 10,
-                ]
-            );
-
-            new \Kirki\Field\Select(
-                [
-                    'settings'    => 'saasty_event_style',
-                    'label'       => esc_html__('Select Event Style', 'saasty'),
-                    'section'     => 'saasty_event_settings',
-                    'default'     => 'style-1',
-                    'choices'     => [
-                        'style-1' => esc_html__('style 1', 'saasty'),
-                        'style-2' => esc_html__('style 2', 'saasty'),
-                    ],
-                ]
-            );
-
-            new \Kirki\Field\Text(
-                [
-                    'settings' => 'saasty_event_post_per_page',
-                    'label'    => esc_html__('Post Per Page', 'saasty'),
-                    'default'     => esc_html__('6', 'saasty'),
-                    'section'  => 'saasty_event_settings',
-                    'priority' => 10,
-                ]
-            );
-
-
-
-
-
-
-
-
-
 
 
 

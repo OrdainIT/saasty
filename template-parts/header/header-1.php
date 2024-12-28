@@ -40,12 +40,14 @@ $header_right_btn_url = get_theme_mod('header_right_btn_url', __('#', 'saasty'))
 $header_right_remove_container = $header_right_switcher ? 'col-xxl-7 col-xl-7 d-none d-xl-block' : 'col-xxl-9 col-xl-10 d-none d-xl-block text-end';
 $header_right__sidebarmenu = $header_right_switcher ? 'd-none  col-xxl-2 col-xl-3 col-6' : 'd-sm-block d-none d-xl-none col-xxl-2 col-xl-3 col-6';
 
+$field_header_bg_color = function_exists('get_field') ? get_field('field_header_bg_color') : '';
+
 ?>
 
 
 <header>
    <!-- header-area-start -->
-   <div id="header-sticky" class="it-header-area it-header-border it-header-transparent p-relative it-header-ptb">
+   <div id="header-sticky" class="it-header-area it-header-border it-header-transparent p-relative it-header-ptb" style="background-color: <?php echo esc_attr($field_header_bg_color, 'saasty'); ?>">
       <div class="container">
          <div class="row align-items-center">
             <div class="col-xxl-3 col-xl-2 col-6">

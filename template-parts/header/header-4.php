@@ -26,13 +26,15 @@ $header_right_search_icon_switcher = get_theme_mod('header_right_search_icon_swi
 $saasty_menu_col = $header_right_switcher ? 'col-xxl-7 col-xl-7 d-none d-xl-block' : 'col-xxl-10 col-xl-10 d-none d-xl-block text-end';
 $header_right__sidebarmenu = $header_right_switcher ? 'd-none col-xxl-3 col-xl-3 col-6' : 'd-sm-block d-none d-xl-none col-xxl-3 col-xl-3 col-6';
 
+$field_header_bg_color = function_exists('get_field') ? get_field('field_header_bg_color') : '';
+
 ?>
 
 
 <header>
 
     <!-- header-area-start -->
-    <div id="header-sticky" class="it-header-area cr-header-style p-relative mt-20 pg-header-style it-header-transparent it-header-ptb">
+    <div id="header-sticky" class="it-header-area cr-header-style p-relative mt-20 pg-header-style it-header-transparent it-header-ptb" style="background-color: <?php echo esc_attr($field_header_bg_color, 'saasty'); ?>">
         <div class="container container-1450">
             <div class="cr-header-wrap">
                 <div class="row align-items-center">

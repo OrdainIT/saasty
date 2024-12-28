@@ -50,6 +50,25 @@ if (function_exists('acf_add_local_field_group')):
                     'id' => '',
                 ),
             ),
+
+            // header bg color
+
+            array(
+                'key' => 'field_header_bg_color',
+                'label' => 'Header BG Color',
+                'name' => 'header_bg_color',
+                'type' => 'color_picker',
+                'instructions' => esc_html__('Select Header BG Color', 'saasty'),
+                'required' => 0,
+                'default_value' => '',
+                'ui' => 1,
+                'wrapper' => array(
+                    'width' => '25', // Set width to 50%
+                    'class' => '',
+                    'id' => '',
+                ),
+            ),
+
             array(
                 'key' => 'field_header_style',
                 'label' => 'Header Style',
@@ -247,7 +266,43 @@ if (function_exists('acf_add_local_field_group')):
                 'preview_size' => 'thumbnail', // Size of the image preview in admin
                 'library' => 'all', // Can be 'all' or 'uploadedTo'
                 'wrapper' => array(
-                    'width' => '50', // Adjust the width as needed
+                    'width' => '25', // Adjust the width as needed
+                    'class' => '',
+                    'id' => '',
+                ),
+            ),
+
+            // footer area padding meta
+
+            array(
+                'key' => 'field_footer_padding',
+                'label' => 'Footer Padding Top',
+                'name' => 'footer_padding',
+                'type' => 'text',
+                'instructions' => esc_html__('Enter Footer Padding Top', 'saasty'),
+                'required' => 0,
+                'default_value' => '115px',
+                'ui' => 1,
+                'wrapper' => array(
+                    'width' => '25', // Set width to 50%
+                    'class' => '',
+                    'id' => '',
+                ),
+            ),
+
+            // footer margin meta
+
+            array(
+                'key' => 'field_footer_margin',
+                'label' => esc_html__('Footer Margin Top', 'saasty'),
+                'name' => 'footer_margin_top',
+                'type' => 'text',
+                'instructions' => esc_html__('Enter Footer Margin Top', 'saasty'),
+                'required' => 0,
+                'ui' => 1,
+                'default_value' => '0px',
+                'wrapper' => array(
+                    'width' => '25', // Set width to 50%
                     'class' => '',
                     'id' => '',
                 ),

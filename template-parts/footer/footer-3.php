@@ -27,6 +27,14 @@ if (!empty($select_footer_bg_image_acf)) {
     $footer_bg_image = get_template_directory_uri() . '/assets/img/shape/footer-bg-1-1.png'; // Default image
 }
 
+
+// footer padding margin
+
+$field_footer_padding_top = function_exists('get_field') ? get_field('field_footer_padding') : '';
+$footer_margin_top = function_exists('get_field') ? get_field('footer_margin_top') : '';
+
+
+
 ?>
 
 
@@ -36,7 +44,7 @@ if (!empty($select_footer_bg_image_acf)) {
 <footer>
 
     <!-- footer-area-start -->
-    <div class="cr-footer-style">
+    <div class="cr-footer-style" style="margin-top: <?php echo esc_attr($footer_margin_top, 'saasty'); ?>; padding-top: <?php echo esc_attr($field_footer_padding_top, 'saasty'); ?>;">
         <?php if (is_active_sidebar('footer-3-1') or is_active_sidebar('footer-3-2') or is_active_sidebar('footer-3-3') or is_active_sidebar('footer-3-4')): ?>
             <div class="it-footer-area cr-footer-border pt-115 pb-65">
                 <div class="container">

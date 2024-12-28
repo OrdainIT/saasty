@@ -33,6 +33,11 @@ $saasty_footer_5_shap = get_theme_mod('saasty_footer_5_shap');
 
 $saasty_footer_copywrite_wrap = $saasty_footer_social_switcher ? 'col-lg-6 col-md-7' : 'col-12 text-center';
 
+// footer padding margin
+
+$field_footer_padding_top = function_exists('get_field') ? get_field('field_footer_padding') : '';
+$footer_margin_top = function_exists('get_field') ? get_field('footer_margin_top') : '';
+
 
 
 
@@ -42,7 +47,7 @@ $saasty_footer_copywrite_wrap = $saasty_footer_social_switcher ? 'col-lg-6 col-m
 
 <footer>
     <!-- footer-area-start -->
-    <div class="seo-footer-style p-relative z-index-1 it-footer-bg dark-green-bg z-index-1" data-background="<?php echo esc_url($footer_bg_image, 'saasty'); ?>">
+    <div class="seo-footer-style p-relative z-index-1 it-footer-bg dark-green-bg z-index-1" data-background="<?php echo esc_url($footer_bg_image, 'saasty'); ?>" style="margin-top: <?php echo esc_attr($footer_margin_top, 'saasty'); ?>; padding-top: <?php echo esc_attr($field_footer_padding_top, 'saasty'); ?>;">
         <?php if (is_active_sidebar('footer-5-1') or is_active_sidebar('footer-5-2') or is_active_sidebar('footer-5-3') or is_active_sidebar('footer-5-4')): ?>
             <img class="seo-footer-shape-1" src="<?php echo esc_url($saasty_footer_5_shap, 'saasty'); ?>" alt="">
             <div class="it-footer-area mb-65">
