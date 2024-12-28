@@ -81,7 +81,14 @@ function saasty_breadcrumb_func()
 
         // Theme options
         $bg_img = get_theme_mod('breadcrumb_image');
+        if (empty($bg_img)) {
+            $bg_img = get_template_directory_uri() . '/assets/img/breadcrumb/breadcrumb-bg.jpg';
+        }
         $breadcrumb_thumb_shap = get_theme_mod('breadcrumb_thumb_shap');
+        // Check if the setting is empty and set a default image from your theme
+        if (empty($breadcrumb_thumb_shap)) {
+            $breadcrumb_thumb_shap = get_template_directory_uri() . '/assets/img/breadcrumb/thumb-1.png';
+        }
         $breadcrumb_switcher = get_theme_mod('breadcrumb_switcher', true);
 
         // Check to hide or show background image

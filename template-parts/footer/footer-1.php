@@ -45,7 +45,7 @@ $footer_margin_top = function_exists('get_field') ? get_field('footer_margin_top
 
 <footer>
    <!-- footer-area-start -->
-   <div class="it-footer-bg black-bg z-index-1" data-background="<?php echo esc_url($footer_bg_image, 'saasty'); ?>" style="margin-top: <?php echo esc_attr($footer_margin_top, 'saasty'); ?>; padding-top: <?php echo esc_attr($field_footer_padding_top, 'saasty'); ?>;">
+   <div class="it-footer-bg black-bg z-index-1" data-background="<?php echo esc_url($footer_bg_image, 'saasty'); ?>"  style="margin-top: <?php echo esc_attr($footer_margin_top, 'saasty'); ?>; padding-top: <?php echo esc_attr($field_footer_padding_top, 'saasty'); ?>;">
       <?php if (is_active_sidebar('footer-1') or is_active_sidebar('footer-2') or is_active_sidebar('footer-3') or is_active_sidebar('footer-4')): ?>
          <div class="it-footer-area mb-65">
             <div class="container">
