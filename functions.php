@@ -273,6 +273,7 @@ require_once saasty_THEME_INC . '/common/theme-widgets.php';
 require_once saasty_THEME_INC . '/common/acf-metabox.php';
 require_once saasty_THEME_INC . '/common/csf-post-meta/service-meta.php';
 require_once saasty_THEME_INC . '/common/csf-post-meta/team-meta.php';
+require_once saasty_THEME_INC . '/common/csf-post-meta/job-meta.php';
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */

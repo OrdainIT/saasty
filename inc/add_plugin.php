@@ -39,11 +39,6 @@ function saasty_register_required_plugins()
             'required'     => true,
         ],
         [
-            'name'         => esc_html__('Woocommerce', 'saasty'),
-            'slug'         => 'woocommerce',
-            'required'     => true,
-        ],
-        [
             'name'         => esc_html__('Advanced Custom Fields Pro', 'saasty'),
             'slug'         => 'advanced-custom-fields-pro',
             'source'       => get_stylesheet_directory() . '/libs/plugins/advanced-custom-fields-pro.zip',

@@ -32,7 +32,7 @@ if (!empty($select_footer_bg_image_acf)) {
 // footer padding margin
 
 $field_footer_padding_top = function_exists('get_field') ? get_field('field_footer_padding') : '';
-$footer_margin_top = function_exists('get_field') ? get_field('footer_margin_top') : '';
+$footer_margin_top = function_exists('get_field') ? (get_field('footer_margin_top') ? get_field('footer_margin_top') : '0px') : '0px';
 
 
 
