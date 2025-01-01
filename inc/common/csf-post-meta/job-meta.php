@@ -55,6 +55,25 @@ if (class_exists('CSF')) {
                     'default' => saasty_kses('#', 'saasty'),
                 ),
 
+                // contact us button
+
+                array(
+                    'id'      => 'job_contact_us_button_text',
+                    'type'    => 'text',
+                    'title'   => esc_html__('Contact Us',
+                        'saasty'
+                    ),
+                    'default' => saasty_kses('Contact Us', 'saasty'),
+                ),
+
+                array(
+                    'id'      => 'job_contact_us_link',
+                    'type'    => 'text',
+                    'title'   => esc_html__('Contact Us Link', 'saasty'),
+                    'default' => saasty_kses('#', 'saasty'),
+                ),
+                
+
 
             )
 
