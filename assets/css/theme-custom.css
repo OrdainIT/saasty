@@ -120,3 +120,8 @@ body.active_menu_class header .it-header-area {
     left: auto;
     right: 0;
 }
+
+
+.elementor-widget-image img {
+  border-radius: 100%;
+}
