@@ -172,6 +172,8 @@ blockquote.wp-block-quote {
   border-radius: 10px;
   padding: 40px 100px 50px 50px;
   background-color: var(--it-common-black);
+  position: relative;
+  z-index: 1;
 }
 
 blockquote.wp-block-quote > p {

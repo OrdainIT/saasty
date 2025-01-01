@@ -874,7 +874,7 @@ add_action(
                 [
                     'settings' => 'footer__bottom_right_three_text',
                     'label'    => esc_html__('Footer Bottom Right Text', 'saasty'),
-                    'description' => esc_html__('Only For Footer Style 2'),
+                    'description' => esc_html__('Only For Footer Style 2', 'saasty'),
                     'section'  => 'saasty_footer_settings',
                     'default'  => saasty_kses(' <div class="it-copyright-link">
                               <a class="border-line-black" href="#">Privacy & Terms.</a>

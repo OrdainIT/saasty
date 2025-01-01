@@ -29,18 +29,7 @@ function saasty_widgets_init()
         'before_title'  => '<h4 class="it-blog-sidebar-title mb-35">',
         'after_title'   => '</h4>',
     ]);
-    /**
-     * Shop sidebar
-     */
-    register_sidebar([
-        'name'          => esc_html__('Wocommerce Sidebar', 'saasty'),
-        'id'            => 'shop-sidebar',
-        'description'          => esc_html__('Set Your Shop Widget', 'saasty'),
-        'before_widget' => '<div id="%1$s" class="it-common-sidebar-widget it-shop-widget  mb-35  %2$s">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h3 class="it-shop-widget-title">',
-        'after_title'   => '</h3>',
-    ]);
+    
 
 
 

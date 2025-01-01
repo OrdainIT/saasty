@@ -31,7 +31,7 @@ if (!empty($select_footer_bg_image_acf)) {
 $saasty_footer_copywrite_wrap = $saasty_footer_social_switcher ? 'col-lg-6 col-md-7' : 'col-12 text-center';
 
 $field_footer_padding_top = function_exists('get_field') ? get_field('field_footer_padding') : '';
-$footer_margin_top = function_exists('get_field') ? get_field('footer_margin_top') : '';
+$footer_margin_top = function_exists('get_field') ? (get_field('footer_margin_top') ? get_field('footer_margin_top') : '0px') : '0px';
 
 ?>
 

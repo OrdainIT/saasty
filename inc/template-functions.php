@@ -61,6 +61,21 @@ function saasty_theme_colors()
             content: url('<?php echo esc_url(get_template_directory_uri(), 'saasty'); ?>/assets/img/inner/check.svg');
         }
 
+        blockquote.wp-block-quote::before {
+            content: "";
+            background-image: url('http://localhost/saasty/wp-content/themes/saasty/assets/img/shape/quote.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 8%;
+            right: 5%;
+            width: 160px;
+            height: 160px;
+            z-index: -1;
+            opacity: .5;
+        }
+
         :root {
             --it-theme-1: <?php echo esc_attr(get_theme_mod('saasty_theme_pcolor', '#1B4CC3')); ?>;
             --it-theme-2: <?php echo esc_attr(get_theme_mod('saasty_theme_scolor', '#FF8A71')); ?>;
@@ -70,7 +85,7 @@ function saasty_theme_colors()
             --it-theme-6: <?php echo esc_attr(get_theme_mod('saasty_secoundary_scolor3', '#746fff')); ?>;
         }
     </style>
-    <?php
+<?php
 }
 add_action('wp_head', 'saasty_theme_colors');
 
@@ -90,9 +105,9 @@ function saasty_dynamic_font()
         // Ensure that these keys exist, else provide default values
         $font_family   = isset($body_font_array['font-family']) ? esc_html($body_font_array['font-family']) : 'Plus Jakarta Sans';
         $font_weight   = isset($body_font_array['variant']) && $body_font_array['variant'] === 'regular' ? '400' : esc_html($body_font_array['variant']);
-        $font_color    = isset($body_font_array['color']) ? esc_html($body_font_array['color']) : '#686868';
+        $font_color    = isset($body_font_array['color']) ? esc_html($body_font_array['color']) : '#5F6168';
         $font_size     = isset($body_font_array['font-size']) ? esc_html($body_font_array['font-size']) : '16px';  // Provide default size
-        $line_height   = isset($body_font_array['line-height']) ? esc_html($body_font_array['line-height']) : '1.3'; // Provide default line-height
+        $line_height   = isset($body_font_array['line-height']) ? esc_html($body_font_array['line-height']) : '1.2'; // Provide default line-height
 
 
         $body_font_css = sprintf(
