@@ -126,5 +126,25 @@ body.active_menu_class header .it-header-area {
   border-radius: 100%;
 }
 
+.elementor-widget-container .cr-hero-thumb img {
+  border-radius: 30px 30px 0 0;
+}
+
+.elementor-widget-container .ss-blog-thumb img {
+  border-radius: 50px;
+}
+
+.elementor-widget-container  .ai-hero-thumb img {
+  border-radius: 10px;
+}
+
+.elementor-widget-container .ai-hero-thumb-sm img {
+  border-radius: 10px;
+}
+
+.elementor-widget-container .seo-hero-thumb img {
+  border-radius: 10px;
+  box-shadow: 0 4px 100px 0 rgba(20, 50, 48, 0.2);
+}
 
 
