@@ -36,7 +36,9 @@ $saasty_footer_copywrite_wrap = $saasty_footer_social_switcher ? 'col-lg-6 col-m
 // footer padding margin
 
 $field_footer_padding_top = function_exists('get_field') ? get_field('field_footer_padding') : '';
-$footer_margin_top = function_exists('get_field') ? (get_field('footer_margin_top') ? get_field('footer_margin_top') : '0px') : '0px';;
+$footer_margin_top = function_exists('get_field') ? (get_field('footer_margin_top') ? get_field('footer_margin_top') : '0px') : '0px';
+
+$field_footer_bg_color = function_exists('get_field') ? get_field('field_footer_bg_color') : '';
 
 
 
@@ -47,7 +49,7 @@ $footer_margin_top = function_exists('get_field') ? (get_field('footer_margin_to
 
 <footer>
     <!-- footer-area-start -->
-    <div class="ma-footer-style seo-footer-style p-relative section-bg pt-120 z-index-1 z-index-1" data-background="<?php echo esc_url($footer_bg_image, 'saasty'); ?>" style="margin-top: <?php echo esc_attr($footer_margin_top, 'saasty'); ?>; padding-top: <?php echo esc_attr($field_footer_padding_top, 'saasty'); ?>;">
+    <div class="ma-footer-style seo-footer-style p-relative section-bg pt-120 z-index-1 z-index-1" data-background="<?php echo esc_url($footer_bg_image, 'saasty'); ?>" style="margin-top: <?php echo esc_attr($footer_margin_top, 'saasty'); ?>; padding-top: <?php echo esc_attr($field_footer_padding_top, 'saasty'); ?>; background-color:<?php echo esc_attr($field_footer_bg_color, 'saasty') ?>;">
         <?php if (is_active_sidebar('footer-6-1') or is_active_sidebar('footer-6-2') or is_active_sidebar('footer-6-3') or is_active_sidebar('footer-6-4')): ?>
             <div class="it-footer-area pb-70">
                 <div class="container">

@@ -36,6 +36,25 @@ if (function_exists('acf_add_local_field_group')):
                     'id' => '',
                 ),
             ),
+            // footer bg color
+
+            array(
+                'key' => 'field_footer_bg_color',
+                'label' => 'Footer BG Color',
+                'name' => 'footer_bg_color',
+                'type' => 'color_picker',
+                'instructions' => esc_html__('Select Footer BG Color', 'saasty'),
+                'required' => 0,
+                'default_value' => '',
+                'ui' => 1,
+                'wrapper' => array(
+                    'width' => '25', // Set width to 50%
+                    'class' => '',
+                    'id' => '',
+                ),
+            ),
+
+
             array(
                 'key' => 'field_header_logo',
                 'label' => 'Header Logo',
