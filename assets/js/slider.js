@@ -83,22 +83,7 @@
 	
 	  
 
-	  
-	////////////////////////////////////////////////////
-	// 13. Swiper Js
-	var it_text_slider = new Swiper(".it-text-active", {
-		loop: true,
-		freemode: true,
-		slidesPerView: 'auto',
-		spaceBetween: 0,
-		centeredSlides: true,
-		allowTouchMove: false,
-		speed: 5000,
-		autoplay: {
-		  delay: 1,
-		  disableOnInteraction: true,
-		},
-	});
+
 	  
 
 })(jQuery);
