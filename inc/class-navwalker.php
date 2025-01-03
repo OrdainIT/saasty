@@ -94,25 +94,31 @@ if ( !class_exists( 'saasty_Navwalker_Class' ) ) {
             $item_output .= '</a>';
             $item_output .= $args->after;
 
-            // Append the mega-menu content as a dropdown if selected
-            if ( !empty($item->custom_field) ) {
+       
+         // Append the mega-menu content with the selected class
+            if (!empty($item->custom_field)) {
                 // Get the post content
                 $post_content = get_post_field('post_content', $item->custom_field);
                 
+                // Retrieve the mega menu class
+                $mega_menu_class = get_post_meta($item->ID, '_menu_item_mega_menu_class', true);
+                $mega_menu_class = !empty($mega_menu_class) ? esc_attr($mega_menu_class) : 'default-mega-menu-class'; // Add a default class if none provided
+
                 // Check if Elementor is active
-                if ( did_action( 'elementor/loaded' ) ) {
+                if (did_action('elementor/loaded')) {
                     // Render the content with Elementor
-                    $elementor_content = \Elementor\Plugin::$instance->frontend->get_builder_content_for_display( $item->custom_field );
-                    $mega_menu_content = '<div class="it-submenu has-home-img-width submenu has-home-img">' . $elementor_content . '</div>';
+                    $elementor_content = \Elementor\Plugin::$instance->frontend->get_builder_content_for_display($item->custom_field);
+                    $mega_menu_content = '<div class="it-submenu has-home-img-width submenu has-home-img ' . $mega_menu_class . '">' . $elementor_content . '</div>';
                 } else {
                     // Fallback to normal content rendering
                     $fallback_content = apply_filters('the_content', $post_content);
-                    $mega_menu_content = '<div class="it-submenu has-home-img-width submenu has-home-img">' . $fallback_content . '</div>';
+                    $mega_menu_content = '<div class="it-submenu has-home-img-width submenu has-home-img ' . $mega_menu_class . '">' . $fallback_content . '</div>';
                 }
 
                 // Append the mega-menu content to the item output
                 $item_output .= $mega_menu_content;
             }
+
 
             $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
         }

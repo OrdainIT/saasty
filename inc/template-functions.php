@@ -501,3 +501,4 @@ function saasty_class_to_widget_nav_menu_container($args, $instance)
     return $args;
 }
 add_filter('widget_nav_menu_args', 'saasty_class_to_widget_nav_menu_container', 10, 2);
+
