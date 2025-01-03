@@ -151,6 +151,40 @@ body.active_menu_class header .it-header-area {
     max-width: inherit;
 }
 
+/* Mega menu css */
+
+.it-meta-menu li.elementor-icon-list-item a {
+  position: relative;
+}
+
+.it-meta-menu li.elementor-icon-list-item a::before {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  content: "";
+  height: 2px;
+  width: 0px;
+  opacity: 0;
+  visibility: hidden;
+  display: inline-block;
+  transition: all 0.3s ease-out 0s;
+  background-color: var(--it-common-black);
+}
+
+.it-meta-menu li.elementor-icon-list-item:hover > a::before {
+  width: 20px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.it-meta-menu li.elementor-icon-list-item:hover > a {
+  padding-left: 25px;
+}
+
+.it-submenu.has-home-img-width.submenu.has-home-img.it-megamenu-wrapper {
+  left: 0;
+  right: 0;
+}
 
 
 

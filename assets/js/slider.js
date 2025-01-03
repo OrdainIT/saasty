@@ -74,6 +74,23 @@
 	  });
 
 
+	  ////////////////////////////////////////////////////
+	// 13. Swiper Js
+	var cr_brand_slider = new Swiper(".it-brand-active", {
+		loop: true,
+		freemode: true,
+		slidesPerView: 'auto',
+		spaceBetween: 100,
+		centeredSlides: true,
+		allowTouchMove: false,
+		speed: 2500,
+		autoplay: {
+		  delay: 1,
+		  disableOnInteraction: true,
+		},
+	  });
+
+
 
 	
 

@@ -502,3 +502,77 @@ function saasty_class_to_widget_nav_menu_container($args, $instance)
 }
 add_filter('widget_nav_menu_args', 'saasty_class_to_widget_nav_menu_container', 10, 2);
 
+
+// Custom Class Add function in menu li
+
+// Step 1: Add a custom field to the menu item settings
+function add_custom_class_to_menu_item($item_id, $item, $depth, $args) {
+    // Retrieve the current custom class value
+    $custom_class = get_post_meta($item_id, '_menu_item_custom_li_class', true);
+    ?>
+    <p class="field-custom-class description description-wide">
+        <label for="edit-menu-item-custom-li-class-<?php echo $item_id; ?>">
+            <?php _e('Custom LI Class'); ?><br>
+            <input type="text" id="edit-menu-item-custom-li-class-<?php echo $item_id; ?>" 
+                   class="widefat code edit-menu-item-custom-li-class" 
+                   name="menu-item-custom-li-class[<?php echo $item_id; ?>]" 
+                   value="<?php echo esc_attr($custom_class); ?>" />
+        </label>
+    </p>
+    <?php
+}
+add_action('wp_nav_menu_item_custom_fields', 'add_custom_class_to_menu_item', 10, 4);
+
+// Step 2: Save the custom field value
+function save_custom_class_menu_item($menu_id, $menu_item_db_id) {
+    if (isset($_POST['menu-item-custom-li-class'][$menu_item_db_id])) {
+        $custom_class = sanitize_text_field($_POST['menu-item-custom-li-class'][$menu_item_db_id]);
+        update_post_meta($menu_item_db_id, '_menu_item_custom_li_class', $custom_class);
+    } else {
+        delete_post_meta($menu_item_db_id, '_menu_item_custom_li_class');
+    }
+}
+add_action('wp_update_nav_menu_item', 'save_custom_class_menu_item', 10, 2);
+
+// Step 3: Add the custom class to the <li> element
+function apply_custom_li_class_to_menu_item($classes, $item, $args, $depth) {
+    // Get the custom class from the post meta
+    $custom_class = get_post_meta($item->ID, '_menu_item_custom_li_class', true);
+    if (!empty($custom_class)) {
+        $classes[] = esc_attr($custom_class);
+    }
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'apply_custom_li_class_to_menu_item', 10, 4);
+
+
+// Mega Menu Class
+
+// Add a custom field for mega menu class in menu item settings
+function add_mega_menu_class_to_menu_item($item_id, $item, $depth, $args) {
+    // Retrieve the current mega menu class value
+    $mega_menu_class = get_post_meta($item_id, '_menu_item_mega_menu_class', true);
+    ?>
+    <p class="field-custom-class description description-wide">
+        <label for="edit-menu-item-mega-menu-class-<?php echo $item_id; ?>">
+            <?php _e('Mega Menu Class'); ?><br>
+            <input type="text" id="edit-menu-item-mega-menu-class-<?php echo $item_id; ?>" 
+                   class="widefat code edit-menu-item-mega-menu-class" 
+                   name="menu-item-mega-menu-class[<?php echo $item_id; ?>]" 
+                   value="<?php echo esc_attr($mega_menu_class); ?>" />
+        </label>
+    </p>
+    <?php
+}
+add_action('wp_nav_menu_item_custom_fields', 'add_mega_menu_class_to_menu_item', 10, 4);
+
+// Save the mega menu class value
+function save_mega_menu_class_menu_item($menu_id, $menu_item_db_id) {
+    if (isset($_POST['menu-item-mega-menu-class'][$menu_item_db_id])) {
+        $mega_menu_class = sanitize_text_field($_POST['menu-item-mega-menu-class'][$menu_item_db_id]);
+        update_post_meta($menu_item_db_id, '_menu_item_mega_menu_class', $mega_menu_class);
+    } else {
+        delete_post_meta($menu_item_db_id, '_menu_item_mega_menu_class');
+    }
+}
+add_action('wp_update_nav_menu_item', 'save_mega_menu_class_menu_item', 10, 2);
