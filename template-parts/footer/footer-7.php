@@ -34,6 +34,8 @@ $saasty_footer_7_shap = get_theme_mod('saasty_footer_7_shap');
 $field_footer_padding_top = function_exists('get_field') ? get_field('field_footer_padding') : '';
 $footer_margin_top = function_exists('get_field') ? (get_field('footer_margin_top') ? get_field('footer_margin_top') : '0px') : '0px';
 
+$field_footer_bg_color = function_exists('get_field') ? get_field('field_footer_bg_color') : '';
+
 
 ?>
 
@@ -45,7 +47,7 @@ $footer_margin_top = function_exists('get_field') ? (get_field('footer_margin_to
 
 <footer>
     <!-- footer-area-start -->
-    <div class="it-footer-bg ai-footer-style ag-footer-style black-2-bg z-index-1" data-background="<?php echo esc_url($footer_bg_image, 'saasty'); ?>" style="margin-top: <?php echo esc_attr($footer_margin_top, 'saasty'); ?>; padding-top: <?php echo esc_attr($field_footer_padding_top, 'saasty'); ?>;">
+    <div class="it-footer-bg ai-footer-style ag-footer-style black-2-bg z-index-1" data-background="<?php echo esc_url($footer_bg_image, 'saasty'); ?>" style="margin-top: <?php echo esc_attr($footer_margin_top, 'saasty'); ?>; padding-top: <?php echo esc_attr($field_footer_padding_top, 'saasty'); ?>; background-color:<?php echo esc_attr($field_footer_bg_color, 'saasty') ?>;">
         <?php if (is_active_sidebar('footer-7-1') or is_active_sidebar('footer-7-2') or is_active_sidebar('footer-7-3') or is_active_sidebar('footer-7-4') or is_active_sidebar('footer-7-5')) : ?>
             <img class="ag-footer-shape-1" src="<?php echo esc_url($saasty_footer_7_shap, 'saasty'); ?>" alt="">
             <div class="it-footer-area mb-65">

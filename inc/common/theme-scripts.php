@@ -14,6 +14,8 @@ function saasty_scripts()
 
 
 
+
+
     wp_enqueue_style('saasty-fonts', saasty_fonts_url(), array(), time());
     // Enqueue normal styles
     wp_enqueue_style('bootstrap', saasty_THEME_CSS_DIR . 'bootstrap.min.css', array());
@@ -31,7 +33,7 @@ function saasty_scripts()
 
 
 
-
+ 
 
     // all js
     wp_enqueue_script('bootstrap-bundle', saasty_THEME_JS_DIR . 'bootstrap.bundle.min.js', ['jquery'], '', true);

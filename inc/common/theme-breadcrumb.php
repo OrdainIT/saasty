@@ -112,7 +112,7 @@ function saasty_breadcrumb_func()
                         <div class="col-lg-12">
                             <div class="it-breadcrumb-content z-index-3">
                                 <div class="it-breadcrumb-title-box">
-                                    <h3 class="it-breadcrumb-title"><?php echo saasty_kses($title); ?></h3>
+                                    <h3 class="it-breadcrumb-title it-split-text it-split-in-right"><?php echo saasty_kses($title); ?></h3>
                                 </div>
                                 <div class="it-breadcrumb-list-wrap">
                                     <div class="it-breadcrumb-list">

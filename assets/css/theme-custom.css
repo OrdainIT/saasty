@@ -147,6 +147,10 @@ body.active_menu_class header .it-header-area {
   box-shadow: 0 4px 100px 0 rgba(20, 50, 48, 0.2);
 }
 
+.elementor-widget-container .ma-hero-thumb img {
+    max-width: inherit;
+}
+
 
 
 
